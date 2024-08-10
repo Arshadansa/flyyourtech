@@ -50,14 +50,9 @@ function HowWork() {
       ],
       projects: "500 Projects",
     },
+    
     // {
-    //   title: "Programming",
-    //   description: [
-    //     "Efficiently aggregate user-friendly",
-    //     "models for frictionless deliverables",
-    //     "collaboratively enhance backward.",
-    //   ],
-    //   projects: "500 Projects",
+    // //  url:"https://techy-xi.vercel.app/assets/img/shape/line-round-1.svg"
     // },
     // Add more objects here as needed
   ];
@@ -88,7 +83,7 @@ function HowWork() {
   const [hovertextNext, setHoverTextNext] = useState(false);
 
   return (
-    <section ref={sectionRef} className="max-w-screen-xl py-56 mx-auto">
+    <section ref={sectionRef} className="max-w-screen-xl overflow-hidden py-56 mx-auto">
       <div className="flex gap-6 flex-col">
         <div>
           <span className=" text-white text-3xl font-display font-extrabold">
@@ -163,8 +158,9 @@ function HowWork() {
           ))}
         </motion.div>
 
-        <motion.div className="grid mt-8 grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid mt-8 grid-cols-1 relative  md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cardData1.map((card, index) => (
+            <>
             <motion.div
               key={index}
               initial={{ y: "+30vw", opacity: 0.5 }}
@@ -216,8 +212,10 @@ function HowWork() {
                 </div>
               </div>
             </motion.div>
+              <img src="https://techy-xi.vercel.app/assets/img/shape/line-round-1.svg" className="absolute right-20 bottom-2  " alt="" />
+            </>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

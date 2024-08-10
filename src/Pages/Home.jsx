@@ -7,6 +7,7 @@ import Footer from "../Components/Footer";
 import OurServices from "../Components/OurServices";
 import Freature from "../Components/Features";
 import HowWork from "../Components/HowWork";
+import Testimonials from "../Components/Testimonials";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <OurServices />
       <Freature />
       <HowWork />
+      <Testimonials />
       <Footer />
     </section>
   );
