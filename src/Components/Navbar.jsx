@@ -1,18 +1,22 @@
 import React from "react";
 import { IoIosMenu } from "react-icons/io";
+import { Link } from "react-scroll";
 
 function Navbar() {
   return (
-    <nav className="font-display w-full lg:pt-3 dark:bg-gray-900">
-      <div className="max-w-screen-2xl flex gap-8 lg:gap-0 flex-wrap items-center justify-between mx-auto p-3 lg:p-4">
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+    <nav className="font-display  w-full lg:pt-3 dark:bg-gray-900">
+      <div className="max-w-screen-2xl flex gap-5 lg:gap-0 flex-wrap items-center justify-between mx-auto  lg:p-4">
+        <Link
+          to="home"
+          smooth={true}
+          duration={1000}
+          className="flex hover:cursor-pointer items-center space-x-3 rtl:space-x-reverse"
+        >
           <span className="self-center  font-bold text-2xl whitespace-nowrap text-white">
             FLY YOUR TECH
           </span>
-        </a>
+        </Link>
         <div className="flex md:order-2  md:gap-4 ">
-          {/* <!--language Dropdown menu --> */}
-
           <button
             id="dropdownHoverButton"
             data-dropdown-toggle="dropdownHover"
@@ -81,7 +85,7 @@ function Navbar() {
             </ul>
           </div>
 
-          <button type="submit" className="hidden md:block ">
+          <button type="submit" className="hidden  md:block ">
             <svg
               className="w-5 text-white h-5"
               aria-hidden="true"
@@ -299,7 +303,7 @@ function Navbar() {
           <button
             data-collapse-toggle="navbar-cta"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white border rounded-full sm:hidden "
+            className="inline-flex items-center borderp-2 w-10 h-10 justify-center text-sm text-white border rounded-full sm:hidden "
             aria-controls="navbar-cta"
             aria-expanded="false"
           >
@@ -322,50 +326,61 @@ function Navbar() {
           </button>
         </div>
         <div
-          className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          className="items-center justify-between hidden w-full lg:flex md:w-auto md:order-1"
           id="navbar-cta"
         >
           <ul className="flex text-lg  flex-col  font-medium p-4 md:p-0 mt-4 border  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  ">
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 md:p-0 uppercase text-white  rounded md:bg-transparent "
+              <Link
+                to="home"
+                smooth={true}
+                duration={1000}
+                className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase text-white  rounded md:bg-transparent "
                 aria-current="page"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              <Link
+                to="about"
+                smooth={true}
+                duration={1000}
+                className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
-                Pages
-              </a>
+                About
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              <Link
+                to="OurServices"
+                smooth={true}
+                duration={1000}
+                className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
-                Project
-              </a>
+                Our Services
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              <Link
+                to="Freature"
+                smooth={true}
+                duration={1000}
+                className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
-                Blog
-              </a>
+                Freature
+              </Link>
             </li>
+
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              <Link
+                to="contact"
+                smooth={true}
+                duration={1000}
+                className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

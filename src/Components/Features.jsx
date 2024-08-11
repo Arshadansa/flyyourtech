@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../Style/Style.css";
-import brand1 from "../Assest/Images/img-01.jpg";
-import brand2 from "../Assest/Images/img-02.jpg";
-import brand3 from "../Assest/Images/img-03.jpg";
-import brand4 from "../Assest/Images/img-01.jpg";
-import brand5 from "../Assest/Images/img-01.jpg";
+import brand1 from "../Assest/Images/moyo.png";
+import brand2 from "../Assest/Images/dongo.png";
+import brand3 from "../Assest/Images/p6.png";
+import brand4 from "../Assest/Images/p4.jpeg";
+import brand5 from "../Assest/Images/p5.png";
 
 function Freature() {
   const [inView, setInView] = useState(false);
@@ -110,7 +110,7 @@ function Freature() {
           <span className=" leading-tight text-center lg:text-start ">
             Dramatically supply transparent backward deliverables before
           </span>
-          <span>caward comp internal or "organic" sources.</span>
+          <span className=" leading-tight text-center lg:text-start ">caward comp internal or "organic" sources.</span>
         </motion.div>
       </div>
       <div className="parent  ">

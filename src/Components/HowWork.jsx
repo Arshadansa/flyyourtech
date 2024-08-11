@@ -65,7 +65,7 @@ function HowWork() {
       ([entry]) => {
         setInView(entry.isIntersecting);
       },
-      { threshold: 0.4 } // Trigger when at least 10% of the element is visible
+      { threshold: 0.1 } // Trigger when at least 10% of the element is visible
     );
 
     if (sectionRef.current) {
@@ -85,7 +85,7 @@ function HowWork() {
   return (
     <section
       ref={sectionRef}
-      className="lg:max-w-screen-xl py-20 p-3  lg:py-56 mx-auto"
+      className="max-w-screen-xl py-20 p-3  lg:py-56 mx-auto"
     >
       <div className="flex items-center justify-center lg:items-start lg:justify-normal flex-wrap gap-6 flex-col">
         <div >
@@ -93,11 +93,12 @@ function HowWork() {
             How It Works
           </span>
         </div>
+        
         <motion.div
           initial={{ x: "-20vw", opacity: 0 }}
           animate={{ x: inView ? 0 : "-20vw", opacity: inView ? 1 : 0 }}
           transition={{ type: "spring", stiffness: 30, damping: 20 }}
-          className="flex flex-col text-center text-xl font-display tracking-tighter font-medium text-[#727993]"
+          className="flex flex-col text-center lg:text-start text-xl font-display tracking-tighter font-medium text-[#727993]"
         >
           <span>
             Dramatically supply transparent backward deliverables before
@@ -119,7 +120,7 @@ function HowWork() {
               }}
               onMouseEnter={() => setHoverText(!hovertext)}
               onMouseLeave={() => setHoverText(!hovertext)}
-              className={` relative gap-6 lg:w-96 p-6 lg:h-96 flex flex-col justify-center bg-[#05103d]  shadow-xl  group overflow-hidden`}
+              className={` relative gap-6  lg:w-96 p-6 lg:h-96 flex flex-col justify-center bg-[#05103d]  shadow-xl  group overflow-hidden`}
             >
               <div className="relative flex flex-col gap-8 z-10">
                 <div className="border relative flex items-center justify-center overflow-hidden  border-[#2f3b65] mb-4 rounded-full h-32 w-32">
@@ -165,7 +166,7 @@ function HowWork() {
                 }}
                 onMouseEnter={() => setHoverTextNext(!hovertextNext)}
                 onMouseLeave={() => setHoverTextNext(!hovertextNext)}
-                className={` relative gap-6 lg:w-96 p-6 lg:h-96 flex flex-col justify-center bg-[#05103d]  shadow-xl  group overflow-hidden`}
+                className={` relative gap-6 lg:w-96 p-6 h-96 flex flex-col justify-center bg-[#05103d]  shadow-xl  group overflow-hidden`}
               >
                 <div className="relative flex flex-col gap-8 z-10">
                   <div className="border relative flex items-center justify-center overflow-hidden  border-[#2f3b65] mb-4 rounded-full h-32 w-32">

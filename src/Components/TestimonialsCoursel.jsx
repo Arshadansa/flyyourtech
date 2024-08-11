@@ -13,7 +13,7 @@ function TestimonialsCarousel() {
         swipeable={true}
         showArrows={false} // Hide side arrows
         showStatus={false} // Hide status indicator (1 of 3)
-        className="w-[300px] lg:w-[100%]"
+        className="w-[300px] md:w-[100%]"
       >
         <div className="h-96 ]">
           <div className="text-white flex-col gap-5 items-center justify-center flex">

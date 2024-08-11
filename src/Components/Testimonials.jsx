@@ -12,7 +12,7 @@ function Testimonials() {
       ([entry]) => {
         setInView(entry.isIntersecting);
       },
-      { threshold: 0.5 } // Trigger when at least 10% of the element is visible
+      { threshold: 0.2 } // Trigger when at least 10% of the element is visible
     );
 
     if (sectionRef.current) {

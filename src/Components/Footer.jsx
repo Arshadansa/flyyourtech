@@ -74,11 +74,11 @@ function Footer() {
                   Contact Us
                 </a>
               </li>
-              <li class="mb-4">
+              {/* <li class="mb-4">
                 <a href="#" class="">
                   Blog
                 </a>
-              </li>
+              </li> */}
               <li class="mb-4">
                 <a href="#" class="">
                   Policy
