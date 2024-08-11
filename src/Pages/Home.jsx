@@ -11,8 +11,15 @@ import Testimonials from "../Components/Testimonials";
 
 function Home() {
   return (
-    <section className=" bg-[#050c36]">
-      <Navbar />
+    <section className="relative bg-[#050c36]">
+      <img
+        src="https://techy-xi.vercel.app/assets/img/shape/line-1.svg"
+        className="h-[550px] object-contain top-1 left-1  absolute z-30 "
+        alt=""
+      />
+      <div className=" fixed  lg:w-full z-20  bg-[#050c36] ">
+        <Navbar />
+      </div>
       <Main />
       <Creative />
       <About />

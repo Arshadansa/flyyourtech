@@ -30,11 +30,11 @@ function Footer() {
   return (
     <footer
       ref={sectionRef}
-      class=" relative flex overflow-hidden flex-col py-20 items-center "
+      class=" relative flex bg-[#070e3a] overflow-hidden flex-col py-20 items-center "
     >
       <hr className="w-[80%]  border-[#1b224e] " />
       <div class="mx-auto w-full  pt-20 max-w-screen-xl">
-        <div class="grid grid-cols-2 justify-self-center gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
+        <div class="grid grid-cols-1 justify-self-center gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
           <motion.div
             initial={{ x: "-10vw", opacity: 0.5 }}
             animate={{ x: inView ? 0.5 : "-10vw", opacity: inView ? 1 : 0.5 }}
@@ -42,7 +42,7 @@ function Footer() {
             className="justify-self-start"
           >
             <h2 className="mb-6 text-2xl tracking-tight font-display text-white dark:text-white">
-              An influential creative agency. <br /> Get IT Solutions For Expert
+              An influential creative agency. <br /> Get's IT Solutions For Expert
               <br />
               Consultants
             </h2>
@@ -50,11 +50,11 @@ function Footer() {
               <li className="mb-4 flex items-center">
                 <a
                   href="#"
-                  className="tracking-tighter text-5xl font-display font-extrabold"
+                  className="tracking-tighter text-4xl lg:text-5xl font-display font-extrabold"
                 >
                   Let’s Chat
                 </a>
-                <GoArrowUpRight size={70} />
+                <GoArrowUpRight className="text-5xl lg:"  />
               </li>
             </ul>
           </motion.div>
@@ -63,12 +63,12 @@ function Footer() {
             initial={{ y: "+10vw", opacity: 0.5 }}
             animate={{ y: inView ? 0 : "+10vw", opacity: inView ? 1 : 0 }}
             transition={{ type: "spring", stiffness: 30, damping: 10 }}
-            className="justify-self-center"
+            className="lg:justify-self-center"
           >
-            <h2 class="mb-6 text-md text-white font-display  dark:text-white">
+            <h2 class="lg:mb-6 mb-4 text-lg lg:text-md text-white font-display  dark:text-white">
               About Us
             </h2>
-            <ul class="text-white  dark:text-gray-400 font-medium">
+            <ul class="text-white text-lg   dark:text-gray-400 font-medium">
               <li class="mb-4 hover:pl-2  ">
                 <a href="#" class="">
                   Contact Us

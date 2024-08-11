@@ -10,7 +10,7 @@ function About() {
       ([entry]) => {
         setInView(entry.isIntersecting);
       },
-      { threshold: 0.1 } // Trigger when at least 10% of the element is visible
+      { threshold: 0.2 } // Trigger when at least 10% of the element is visible
     );
 
     if (sectionRef.current) {
@@ -27,15 +27,15 @@ function About() {
   return (
     <section
       ref={sectionRef}
-      className="max-w-screen-xl py- gap-10 overflow-hidden flex justify-center items-center text-white mx-auto  "
+      className="max-w-screen-xl p-3 py-20 flex-col lg:flex-row gap-10 overflow-hidden flex justify-center items-center text-white mx-auto  "
     >
       <motion.div
-        className=" w-[60%]  "
+        className=" lg:w-[60%]  "
         initial={{ x: "50vw", opacity: 0 }} // Initial state with opacity 0 (invisible)
         animate={{ x: inView ? 0 : "-20vw", opacity: inView ? 1 : 0 }} // Animate opacity to 1 when in view
         transition={{ type: "spring", stiffness: 30, damping: 10 }}
       >
-        <div className="flex w-full  items-end justify-end">
+        <div className="flex w-full   items-end justify-center lg:justify-end">
           <div className="flex items-center justify-center border rounded-full h-36 bg-white w-36">
             <img
               className="h-32  animate-spin-slow"
@@ -56,9 +56,9 @@ function About() {
           alt=""
         />
       </motion.div>
-      {/* div2 coming from the right */}
+
       <motion.div
-        className="w-[50%] flex-col flex justify-start  gap-7 "
+        className="lg:w-[50%] flex-col flex justify-start  gap-7 "
         initial={{ x: "50vw", opacity: 0 }} // Initial state with opacity 0 (invisible)
         animate={{ x: inView ? 0 : "100vw", opacity: inView ? 1 : 0 }} // Animate opacity to 1 when in view
         transition={{ type: "spring", stiffness: 30, damping: 20 }}

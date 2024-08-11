@@ -48,7 +48,7 @@ function Freature() {
     },
     mobile: {
       breakpoint: { max: 767, min: 464 },
-      items: 2,
+      items: 1,
       slidesToSlide: 1, // optional, default to 1.
     },
   };
@@ -93,11 +93,11 @@ function Freature() {
   return (
     <section
       ref={sectionRef}
-      className="max-w-screen-2xl flex flex-col gap-20 pt-52 mx-auto "
+      className="max-w-screen-2xl p-3 flex flex-col gap-20 pt-32 lg:pt-52 mx-auto "
     >
-      <div className="flex pl-32 gap-6 flex-col">
-        <div>
-          <span className=" text-white text-3xl font-display font-extrabold">
+      <div className="flex lg:pl-32 items-center lg:items-start lg:justify-normal justify-center gap-6 flex-col">
+        <div className="text-center">
+          <span className=" text-center text-white text-3xl font-display font-extrabold">
             Featured Works
           </span>
         </div>
@@ -107,7 +107,7 @@ function Freature() {
           transition={{ type: "spring", stiffness: 30, damping: 20 }}
           className="flex flex-col text-xl font-display  tracking-tighter  font-medium text-[#727993]"
         >
-          <span className=" leading-tight ">
+          <span className=" leading-tight text-center lg:text-start ">
             Dramatically supply transparent backward deliverables before
           </span>
           <span>caward comp internal or "organic" sources.</span>
@@ -128,7 +128,7 @@ function Freature() {
             return (
               <>
                 <div
-                  className=" h-96 w-[470px] hover:cursor-pointer  hover:bg-[#913bfe] flex  pl-8 pt-8 items-end  border-t-2 border-l-2 border-r-2 ml-4 justify-end  "
+                  className=" lg:h-96 h-80 w-80 lg:w-[470px] hover:cursor-pointer  hover:bg-[#913bfe] flex  pl-8 pt-8 items-end  border-t-2 border-l-2 border-r-2 ml-4 justify-end  "
                   key={index}
                 >
                   <img

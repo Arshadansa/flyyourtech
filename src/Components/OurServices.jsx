@@ -14,7 +14,7 @@ function OurServices() {
       ],
       projects: "324 Projects",
     },
-   
+
     {
       title: "Web Development",
       description: [
@@ -33,7 +33,6 @@ function OurServices() {
       ],
       projects: "500 Projects",
     },
-    
   ];
 
   const cardData1 = [
@@ -75,7 +74,7 @@ function OurServices() {
       ([entry]) => {
         setInView(entry.isIntersecting);
       },
-      { threshold: 0.1 } // Trigger when at least 10% of the element is visible
+      { threshold: 0.2 } // Trigger when at least 10% of the element is visible
     );
 
     if (sectionRef.current) {
@@ -93,10 +92,13 @@ function OurServices() {
   const [hovertextNext, setHoverTextNext] = useState(false);
 
   return (
-    <section ref={sectionRef} className="max-w-screen-xl py-56 mx-auto">
-      <div className="flex gap-6 flex-col">
+    <section
+      ref={sectionRef}
+      className="max-w-screen-xl  lg:p-0 lg:pt-56 mx-auto"
+    >
+      <div className="flex justify-center items-center lg:items-start lg:justify-normal gap-6 flex-col">
         <div>
-          <span className=" text-white text-3xl font-display font-extrabold">
+          <span className=" text-white   text-3xl font-display font-extrabold">
             Our Services
           </span>
         </div>
@@ -104,9 +106,9 @@ function OurServices() {
           initial={{ x: "-20vw", opacity: 0 }}
           animate={{ x: inView ? 0 : "-20vw", opacity: inView ? 1 : 0 }}
           transition={{ type: "spring", stiffness: 30, damping: 20 }}
-          className="flex flex-col text-xl font-display tracking-tighter font-medium text-[#727993]"
+          className="flex  flex-col justify-center items-center lg:items-start lg:justify-normal text-xl font-display tracking-tighter font-medium text-[#727993]"
         >
-          <span>
+          <span className=" text-center ">
             Dramatically supply transparent backward deliverables before
           </span>
           <span>caward comp internal or "organic" sources.</span>
@@ -126,7 +128,7 @@ function OurServices() {
               }}
               onMouseEnter={() => setHoverText(!hovertext)}
               onMouseLeave={() => setHoverText(!hovertext)}
-              className={` relative w-96 p-8 h-92 border-[#50557b] border-2 group overflow-hidden`}
+              className={` relative lg:w-96 p-6 lg:p-8 lg:h-92 border-[#50557b] border-2 group overflow-hidden`}
             >
               <div className="absolute inset-0 bg-[#913bfe] text-white bottom-full group-hover:bottom-0 transition-all duration-500 ease-in-out"></div>
 
@@ -146,7 +148,7 @@ function OurServices() {
                   />
                 </div>
                 <div>
-                  <span className="uppercase hover:cursor-pointer hover:underline text-white text-2xl font-display tracking-tight font-extrabold">
+                  <span className="uppercase hover:cursor-pointer hover:underline text-white text-xl lg:text-2xl font-display tracking-tight font-extrabold">
                     {card.title}
                   </span>
                 </div>
@@ -158,14 +160,14 @@ function OurServices() {
                       key={descIndex}
                       className={`${
                         hovertext ? "text-white" : "text-[#686e8e]"
-                      } text-lg`}
+                      } text-md lg:text-lg`}
                     >
                       {desc}
                     </span>
                   ))}
                 </div>
                 <div>
-                  <span className="hover:underline text-xl text-white uppercase">
+                  <span className="hover:underline text-lg lg:text-xl text-white uppercase">
                     {card.projects}
                   </span>
                 </div>
@@ -178,8 +180,8 @@ function OurServices() {
           {cardData1.map((card, index) => (
             <motion.div
               key={index}
-              initial={{ y: "+30vw", opacity: 0.5 }}
-              animate={{ y: inView ? 0 : "+30vw", opacity: inView ? 1 : 0 }}
+              initial={{ y: "+20vw", opacity: 0.5 }}
+              animate={{ y: inView ? 0 : "+20vw", opacity: inView ? 1 : 0 }}
               transition={{
                 type: "spring",
                 stiffness: 30,
@@ -188,7 +190,7 @@ function OurServices() {
               }}
               onMouseEnter={() => setHoverTextNext(!hovertextNext)}
               onMouseLeave={() => setHoverTextNext(!hovertextNext)}
-              className={` relative w-96 p-8 h-92 border-[#50557b] border-2 group overflow-hidden`}
+              className={` relative lg:w-96 p-8 lg:h-92 border-[#50557b] border-2 group overflow-hidden`}
             >
               <div className="absolute inset-0 bg-[#913bfe] text-white bottom-full group-hover:bottom-0 transition-all duration-500 ease-in-out"></div>
 
@@ -208,7 +210,7 @@ function OurServices() {
                   />
                 </div>
                 <div>
-                  <span className="uppercase hover:cursor-pointer hover:underline text-white text-2xl font-display tracking-tight font-extrabold">
+                  <span className="uppercase hover:cursor-pointer hover:underline text-white text-xl lg:text-2xl font-display tracking-tight font-extrabold">
                     {card.title}
                   </span>
                 </div>
@@ -220,14 +222,14 @@ function OurServices() {
                       key={descIndex}
                       className={`${
                         hovertextNext ? "text-white" : "text-[#686e8e]"
-                      } text-lg`}
+                      } text-md lg:text-lg`}
                     >
                       {desc}
                     </span>
                   ))}
                 </div>
                 <div>
-                  <span className="hover:underline text-xl text-white uppercase">
+                  <span className="hover:underline text-lg lg:text-xl text-white uppercase">
                     {card.projects}
                   </span>
                 </div>
