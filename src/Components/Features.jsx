@@ -113,7 +113,7 @@ function Freature() {
           <span className=" leading-tight text-center lg:text-start ">caward comp internal or "organic" sources.</span>
         </motion.div>
       </div>
-      <div className="parent  ">
+      <div className=" ">
         <Carousel
           responsive={responsive}
           autoPlay={true}
@@ -128,12 +128,12 @@ function Freature() {
             return (
               <>
                 <div
-                  className=" lg:h-96 h-80 w-80 lg:w-[470px] hover:cursor-pointer  hover:bg-[#913bfe] flex  pl-8 pt-8 items-end  border-t-2 border-l-2 border-r-2 ml-4 justify-end  "
+                  className=" lg:h-96   h-80 w-80 lg:w-[470px] hover:cursor-pointer  hover:bg-[#913bfe] flex  pl-8 pt-8 items-end  border-t-2 border-l-2 border-r-2 ml-4 justify-end  "
                   key={index}
                 >
                   <img
                     src={imageUrl.url}
-                    className="w-full h-full"
+                    className="w-full  h-full"
                     alt="movie"
                   />
                 </div>

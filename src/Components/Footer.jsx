@@ -3,6 +3,8 @@ import { GoArrowUpRight } from "react-icons/go";
 import { IoLogoTwitter } from "react-icons/io";
 import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 
 function Footer() {
   const [inView, setInView] = useState(false);
@@ -42,7 +44,8 @@ function Footer() {
             className="justify-self-start"
           >
             <h2 className="mb-6 text-2xl tracking-tight font-display text-white dark:text-white">
-              An influential creative agency. <br /> Get's IT Solutions For Expert
+              An influential creative agency. <br /> Get's IT Solutions For
+              Expert
               <br />
               Consultants
             </h2>
@@ -54,7 +57,7 @@ function Footer() {
                 >
                   Let’s Chat
                 </a>
-                <GoArrowUpRight className="text-5xl lg:"  />
+                <GoArrowUpRight className="text-5xl lg:" />
               </li>
             </ul>
           </motion.div>
@@ -65,26 +68,24 @@ function Footer() {
             transition={{ type: "spring", stiffness: 30, damping: 10 }}
             className="lg:justify-self-center"
           >
-            <h2 class="lg:mb-6 mb-4 text-lg lg:text-md text-white font-display  dark:text-white">
-              About Us
-            </h2>
+            <Link to="about" smooth={true} duration={1000}>
+              <h2 class="lg:mb-4 hover:pl-2 hover:cursor-pointer mb-4 text-lg lg:text-md text-white font-display  dark:text-white">
+                About Us
+              </h2>
+            </Link>
             <ul class="text-white text-lg   dark:text-gray-400 font-medium">
-              <li class="mb-4 hover:pl-2  ">
-                <a href="#" class="">
+              <Link to="/contact" smooth={true} duration={1000} class="  ">
+                <li className="hover:pl-2  mb-4 hover:cursor-pointer">
                   Contact Us
-                </a>
-              </li>
-              {/* <li class="mb-4">
-                <a href="#" class="">
-                  Blog
-                </a>
-              </li> */}
-              <li class="mb-4">
+                </li>
+              </Link>
+
+              <li class="hover:pl-2 mb-4 hover:cursor-pointer ">
                 <a href="#" class="">
                   Policy
                 </a>
               </li>
-              <li class="mb-4">
+              <li class="hover:pl-2 mb-4 hover:cursor-pointer">
                 <a href="#" class="">
                   Refund
                 </a>
@@ -99,12 +100,13 @@ function Footer() {
             className="justify-self-end"
           >
             <h2 class="mb-6 text-xl font-display font-extrabold text-white  dark:text-white">
-              FlyYourTech.@example.com
+              Flyyourtech@gmail.com
             </h2>
             <ul class="text-white dark:text-gray-400">
               <li class="mb-4">
                 <span class=" text-xl">
-                  4517 Washington Ave. Manchester, Kentucky 39495
+                  Building 56 , Ward 2 , Amarpatan Road ,Ramnagar, Satna , (M.P)
+                  , INDIA
                 </span>
               </li>
             </ul>

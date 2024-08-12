@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { Link } from "react-scroll";
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <nav className="font-display  w-full lg:pt-3 dark:bg-gray-900">
       <div className="max-w-screen-2xl flex gap-5 lg:gap-0 flex-wrap items-center justify-between mx-auto  lg:p-4">
@@ -16,12 +21,12 @@ function Navbar() {
             FLY YOUR TECH
           </span>
         </Link>
-        <div className="flex md:order-2  md:gap-4 ">
+        <div className="flex  md:order-2  md:gap-4 ">
           <button
             id="dropdownHoverButton"
             data-dropdown-toggle="dropdownHover"
             data-dropdown-trigger="hover"
-            className=" text-[#abb0ce] mr-2 font-medium  md:mr-4  text-lg flex items-center  "
+            className=" text-[#abb0ce] hidden mr-2 font-medium  md:mr-4  text-lg md:flex items-center  "
             type="button"
           >
             English{" "}
@@ -305,7 +310,8 @@ function Navbar() {
             type="button"
             className="inline-flex items-center borderp-2 w-10 h-10 justify-center text-sm text-white border rounded-full sm:hidden "
             aria-controls="navbar-cta"
-            aria-expanded="false"
+            aria-expanded={isMenuOpen}
+            onClick={toggleMenu}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -326,10 +332,12 @@ function Navbar() {
           </button>
         </div>
         <div
-          className="items-center justify-between hidden w-full lg:flex md:w-auto md:order-1"
           id="navbar-cta"
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } w-full lg:flex md:w-auto`}
         >
-          <ul className="flex text-lg  flex-col  font-medium p-4 md:p-0 mt-4 border  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  ">
+          <ul className="flex flex-col md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
               <Link
                 to="home"
@@ -371,7 +379,6 @@ function Navbar() {
                 Freature
               </Link>
             </li>
-
             <li>
               <Link
                 to="contact"
