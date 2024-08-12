@@ -2,19 +2,24 @@ import React from "react";
 import { motion } from "framer-motion";
 import ContactNavbar from "../Components/ContactNavbar";
 import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
-import { IoLogoTwitter } from "react-icons/io5";
+import {
+  IoLocationOutline,
+  IoLogoTwitter,
+  IoTimeOutline,
+} from "react-icons/io5";
+import { MdOutlinePhone } from "react-icons/md";
 
 function Contact() {
   return (
-    <section className="w-full lg:h-[100vh] h-[100%]  md:h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
+    <section className="w-full h-full 2xl:h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
       <ContactNavbar />
-      <div className="max-w-screen-xl w-full p-3 lg:p-0 flex-col lg:flex-row lg:py-32   flex items-center  justify-between mx-auto">
+      <div className="max-w-screen-xl w-full p-3 flex-col lg:flex-row py-12 md:py-52 lg:py-32   flex items-center  justify-between mx-auto">
         <img
           src="https://techy-xi.vercel.app/assets/img/page-title/img-01.png"
           className=" bottom-0 left-0 absolute z-0 "
           alt=""
         />
-        <div className="lg:w-1/2   mb-12  ">
+        <div className="lg:w-1/2  lg:mb-12  ">
           <img
             src="https://techy-xi.vercel.app/assets/img/shape/star-2.svg"
             className=" absolute z-0  opacity-50  top-40 lg:left-[500px] "
@@ -31,6 +36,42 @@ function Contact() {
           />
         </div>
         <div className="lg:w-1/2">
+          <ul className="flex flex-wrap  my-12 lg:hidden font-medium mt-4  rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row  md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+            {/* <li className="flex items-center lg:border-r-2 pr-12">
+              <a
+                href="/"
+                className="block py-2 px-3 md:p-0 text-white rounded md:bg-transparent md:dark:bg-transparent"
+                aria-current="page"
+              >
+                Home
+              </a>
+            </li> */}
+            <li className="flex gap-2 items-center lg:border-r-2 lg:pr-12">
+              <IoTimeOutline size={40} className="text-white mt-2" />
+              <div className="flex text-white flex-col">
+                <span className="block py-2 px-3 md:p-0 rounded">Time</span>
+                <span className="font-extrabold">10AM - 11:30PM</span>
+              </div>
+            </li>
+            <li className="flex gap-2 text-white items-center lg:border-r-2 lg:pr-12">
+              <IoLocationOutline size={40} className="text-white mt-2" />
+              <div className="flex flex-col">
+                <span className="block py-2 px-3 md:p-0 text-white rounded">
+                  Location
+                </span>
+                <span className="font-extrabold">(M.P), INDIA</span>
+              </div>
+            </li>
+            <li className="flex gap-2 text-white items-center">
+              <MdOutlinePhone size={40} className="text-white mt-2" />
+              <div className="flex flex-col">
+                <span className="block py-2 px-3 md:p-0 text-white rounded">
+                  Phone
+                </span>
+                <span className="font-extrabold">+917470391011</span>
+              </div>
+            </li>
+          </ul>
           <motion.div
             className="absolute right-20 bottom-10"
             animate={{
@@ -99,12 +140,15 @@ function Contact() {
               class="block p-2.5 w-full text-sm text-black  rounded-lg border border-gray-300  "
               placeholder="Leave a comment..."
             ></textarea>
+            <div className="  w-full flex items-center lg:justify-normal justify-center">
+
             <button
               type="submit"
-              className="text-white mt-12  ml-16 lg:ml-0  uppercase hover:bg-black z-20  bg-[#913bfe] px-12  font-bold rounded-md py-3 text-md"
+              className="text-white mt-12     uppercase hover:bg-black z-20  bg-[#913bfe] px-12  font-bold rounded-md py-3 text-md"
             >
               Submit Now
             </button>
+            </div>
           </form>
         </div>
         <img
@@ -113,7 +157,7 @@ function Contact() {
           alt=""
         />
       </div>
-      <div class="max-w-screen-xl  w-full mx-auto  border-[#242656]  p-4 lg:p-0 gap-5 border-t  flex-wrap flex items-center justify-center lg:justify-between">
+      <div class="max-w-screen-xl h-32 w-full mx-auto  border-[#242656]  p-4  gap-5 border-t  flex-wrap flex items-center justify-center lg:justify-between">
         <span class="text-lg tracking-tight text-white dark:text-gray-300 sm:text-center">
           <a href="https://flowbite.com/">Fly Your Tech©2024 </a>, All Rights
           Reserved.

@@ -22,7 +22,7 @@ function Navbar() {
           </span>
         </Link>
         <div className="flex  md:order-2  md:gap-4 ">
-          <button
+          {/* <button
             id="dropdownHoverButton"
             data-dropdown-toggle="dropdownHover"
             data-dropdown-trigger="hover"
@@ -45,7 +45,7 @@ function Navbar() {
                 d="m1 1 4 4 4-4"
               />
             </svg>
-          </button>
+          </button> */}
 
           <div
             id="dropdownHover"
@@ -90,7 +90,7 @@ function Navbar() {
             </ul>
           </div>
 
-          <button type="submit" className="hidden  md:block ">
+          {/* <button type="submit" className="hidden  md:block ">
             <svg
               className="w-5 text-white h-5"
               aria-hidden="true"
@@ -107,11 +107,11 @@ function Navbar() {
               />
             </svg>
             <span className="sr-only">Search</span>
-          </button>
+          </button> */}
 
           {/* 
           <!-- drawer init and show --> */}
-          <div className="text-center  md:flex border rounded-full p-2 hidden  items-center ">
+          <div className="text-center   border rounded-full p-2 hidden  items-center ">
             <button
               className="text-white text-2xl  "
               type="button"

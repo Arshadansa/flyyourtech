@@ -20,7 +20,7 @@ function ContactNavbar() {
         <button
           data-collapse-toggle="navbar-solid-bg"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="  items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-solid-bg"
           aria-expanded={isOpen}
           onClick={toggleMenu}
@@ -48,8 +48,8 @@ function ContactNavbar() {
           } w-full lg:block md:w-auto`}
           id="navbar-solid-bg"
         >
-          <ul className="flex flex-col font-medium mt-4 md:mt-10 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
-            <li className="flex items-center lg:border-r-2 pr-12">
+          <ul className="flex flex-col font-medium mt-4  rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+            {/* <li className="flex items-center lg:border-r-2 pr-12">
               <a
                 href="/"
                 className="block py-2 px-3 md:p-0 text-white rounded md:bg-transparent md:dark:bg-transparent"
@@ -57,7 +57,7 @@ function ContactNavbar() {
               >
                 Home
               </a>
-            </li>
+            </li> */}
             <li className="flex gap-2 items-center lg:border-r-2 pr-12">
               <IoTimeOutline size={40} className="text-white mt-2" />
               <div className="flex text-white flex-col">
