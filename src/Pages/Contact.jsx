@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import ContactNavbar from "../Components/ContactNavbar";
 import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
@@ -8,8 +8,65 @@ import {
   IoTimeOutline,
 } from "react-icons/io5";
 import { MdOutlinePhone } from "react-icons/md";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { target } = e;
+    const { name, value } = target;
+
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_1fkckrv",
+        "template_xgghux7",
+        {
+          from_name: form.name,
+          to_name: "Abhay Gupta",
+          from_email: form.email,
+          to_email: "flyyourtech@gmail.com",
+          message: form.message,
+        },
+        "RyALEi70XU6pe4wsL"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.error(error);
+
+          alert("Ahh, something went wrong. Please try again.");
+        }
+      );
+  };
+
   return (
     <section className="w-full h-full 2xl:h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
       <ContactNavbar />
@@ -35,17 +92,9 @@ function Contact() {
             alt=""
           />
         </div>
-        <div className="lg:w-1/2">
-          <ul className="flex flex-wrap  my-12 lg:hidden font-medium mt-4  rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row  md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
-            {/* <li className="flex items-center lg:border-r-2 pr-12">
-              <a
-                href="/"
-                className="block py-2 px-3 md:p-0 text-white rounded md:bg-transparent md:dark:bg-transparent"
-                aria-current="page"
-              >
-                Home
-              </a>
-            </li> */}
+        <div className="lg:w-1/2 relative z-10">
+          <ul className="flex flex-wrap  my-12 lg:hidden font-medium mt-4  rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row  md:border-0 ">
+            
             <li className="flex gap-2 items-center lg:border-r-2 lg:pr-12">
               <IoTimeOutline size={40} className="text-white mt-2" />
               <div className="flex text-white flex-col">
@@ -62,15 +111,20 @@ function Contact() {
                 <span className="font-extrabold">(M.P), INDIA</span>
               </div>
             </li>
-            <li className="flex gap-2 text-white items-center">
-              <MdOutlinePhone size={40} className="text-white mt-2" />
-              <div className="flex flex-col">
-                <span className="block py-2 px-3 md:p-0 text-white rounded">
-                  Phone
-                </span>
-                <span className="font-extrabold">+917470391011</span>
-              </div>
-            </li>
+            <a href="tel:+917470391011" className="flex gap-2">
+              <li className="flex gap-2 hover:cursor-pointer text-white items-center">
+                <MdOutlinePhone
+                  size={40}
+                  className="text-white  hover:cursor-pointer mt-2"
+                />
+                <div className="flex flex-col">
+                  <span className="block py-2 px-3 md:p-0 text-white rounded">
+                    Phone
+                  </span>
+                  <span className="font-extrabold">+917470391011</span>
+                </div>
+              </li>
+            </a>
           </ul>
           <motion.div
             className="absolute right-20 bottom-10"
@@ -88,7 +142,7 @@ function Contact() {
               alt=""
             />
           </motion.div>{" "}
-          <form class="w-full max-w-xl">
+          <form ref={formRef} onSubmit={handleSubmit} class="w-full  relative z-10 max-w-xl">
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
@@ -98,6 +152,9 @@ function Contact() {
                   Your Name
                 </label>
                 <input
+                  value={form.name}
+                  onChange={handleChange}
+                  name="name"
                   class="appearance-none block w-full bg-gray-200 text-black border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
                   type="text"
@@ -115,6 +172,9 @@ function Contact() {
                   Your Email
                 </label>
                 <input
+                  value={form.email}
+                  onChange={handleChange}
+                  name="email"
                   class="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-last-name"
                   type="email"
@@ -135,19 +195,21 @@ function Contact() {
               alt=""
             />
             <textarea
+              name="message"
               id="message"
+              value={form.message}
+              onChange={handleChange}
               rows="4"
               class="block p-2.5 w-full text-sm text-black  rounded-lg border border-gray-300  "
               placeholder="Leave a comment..."
             ></textarea>
             <div className="  w-full flex items-center lg:justify-normal justify-center">
-
-            <button
-              type="submit"
-              className="text-white mt-12     uppercase hover:bg-black z-20  bg-[#913bfe] px-12  font-bold rounded-md py-3 text-md"
-            >
-              Submit Now
-            </button>
+              <button
+                type="submit"
+                className="text-white mt-12     uppercase hover:bg-black z-20  bg-[#913bfe] px-12  font-bold rounded-md py-3 text-md"
+              >
+                {loading ? "Sending..." : "Send"}
+              </button>
             </div>
           </form>
         </div>

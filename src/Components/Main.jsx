@@ -30,9 +30,11 @@ function Main() {
         </p>
       </div>
       <div className="mt-10  relative ">
+        <a href="/contact">
         <button className="text-white hover:bg-black z-20  bg-[#913bfe] px-8  rounded-md py-2 text-lg">
           GETSTARTEDNOW
         </button>
+        </a>
       </div>
     </section>
   );

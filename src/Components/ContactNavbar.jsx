@@ -43,12 +43,10 @@ function ContactNavbar() {
           </svg>
         </button>
         <div
-          className={`${
-            isOpen ? "block" : "hidden"
-          } w-full lg:block md:w-auto`}
+          className={`${isOpen ? "block" : "hidden"} w-full lg:block md:w-auto`}
           id="navbar-solid-bg"
         >
-          <ul className="flex flex-col font-medium mt-4  rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+          <ul className="flex flex-col font-medium mt-4  rounded-lg md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
             {/* <li className="flex items-center lg:border-r-2 pr-12">
               <a
                 href="/"
@@ -74,14 +72,19 @@ function ContactNavbar() {
                 <span className="font-extrabold">(M.P), INDIA</span>
               </div>
             </li>
-            <li className="flex gap-2 text-white items-center">
-              <MdOutlinePhone size={40} className="text-white mt-2" />
-              <div className="flex flex-col">
-                <span className="block py-2 px-3 md:p-0 text-white rounded">
-                  Phone
-                </span>
-                <span className="font-extrabold">+91 747 706 6373</span>
-              </div>
+            <li className="flex gap-2  text-white items-center">
+              <a href="tel:+91 747 706 6373" className="flex gap-2">
+                <MdOutlinePhone
+                  size={40}
+                  className="text-white mt-2 hover:cursor-pointer"
+                />
+                <div className="flex flex-col">
+                  <span className="block py-2 px-3 hover:cursor-pointer md:p-0 text-white rounded">
+                    Phone
+                  </span>
+                  <span className="font-extrabold">+91 747 706 6373</span>
+                </div>
+              </a>
             </li>
           </ul>
         </div>
