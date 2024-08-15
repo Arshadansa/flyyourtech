@@ -70,7 +70,7 @@ function Contact() {
   return (
     <section className="w-full h-full 2xl:h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
       <ContactNavbar />
-      <div className="max-w-screen-xl w-full p-3 flex-col lg:flex-row py-12 md:py-52 lg:py-32   flex items-center  justify-between mx-auto">
+      <div className="max-w-screen-xl w-full p-3 flex-col lg:flex-row py-12 md:py-52 lg:py-24   flex items-center  justify-between mx-auto">
         <img
           src="https://techy-xi.vercel.app/assets/img/page-title/img-01.png"
           className=" bottom-0 left-0 absolute z-0 "
@@ -94,7 +94,6 @@ function Contact() {
         </div>
         <div className="lg:w-1/2 relative z-10">
           <ul className="flex flex-wrap  my-12 lg:hidden font-medium mt-4  rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row  md:border-0 ">
-            
             <li className="flex gap-2 items-center lg:border-r-2 lg:pr-12">
               <IoTimeOutline size={40} className="text-white mt-2" />
               <div className="flex text-white flex-col">
@@ -142,7 +141,11 @@ function Contact() {
               alt=""
             />
           </motion.div>{" "}
-          <form ref={formRef} onSubmit={handleSubmit} class="w-full  relative z-10 max-w-xl">
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            class="w-full  relative z-10 max-w-xl"
+          >
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
@@ -155,14 +158,18 @@ function Contact() {
                   value={form.name}
                   onChange={handleChange}
                   name="name"
-                  class="appearance-none block w-full bg-gray-200 text-black border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  className={`appearance-none block w-full bg-gray-200 text-black border ${
+                    !form.name ? "border-red-500" : "border-gray-300"
+                  } rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
                   id="grid-first-name"
                   type="text"
                   placeholder="JaneDoe"
                 />
-                <p class="text-red-500 text-xs italic">
-                  Please fill out this field.
-                </p>
+                {!form.name && (
+                  <p className="text-red-500 text-xs italic">
+                    Please fill out this field.
+                  </p>
+                )}
               </div>
               <div class="w-full md:w-1/2 px-3">
                 <label
