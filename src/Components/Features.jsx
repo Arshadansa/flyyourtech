@@ -9,8 +9,10 @@ import "../Style/Style.css";
 import brand1 from "../Assest/Images/moyo.png";
 import brand2 from "../Assest/Images/dongo.png";
 import brand3 from "../Assest/Images/p6.png";
-import brand4 from "../Assest/Images/p4.jpeg";
-import brand5 from "../Assest/Images/p5.png";
+import brand4 from "../Assest/Images/Screenshot (456).png";
+import brand5 from "../Assest/Images/Screenshot (458).png";
+import brand6 from "../Assest/Images/Screenshot (461).png";
+import brand7 from "../Assest/Images/Screenshot (460).png";
 
 function Freature() {
   const [inView, setInView] = useState(false);
@@ -74,12 +76,12 @@ function Freature() {
       des: "Web Analytics",
     },
     {
-      url: brand1,
+      url: brand6,
       title: "Web Design",
       des: "Web Analytics",
     },
     {
-      url: brand2,
+      url: brand7,
       title: "Mobile info",
       des: "Upcoming phone",
     },
