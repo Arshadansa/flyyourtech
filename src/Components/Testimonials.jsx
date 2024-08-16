@@ -32,8 +32,8 @@ function Testimonials() {
       ref={sectionRef}
       className="lg:py-32   flex gap-24 lg:gap-32 flex-col items-center justify-center "
     >
-      <div className="bg-[#913bfe] p-6 lg:py-0 lg:gap-0 gap-3 flex flex-wrap items-center justify-center lg:justify-between px-12  lg:w-[90%] lg:h-80">
-        <div className="flex flex-col justify-center items-center gap-3 lg:gap-5 ">
+      <div className="bg-[#913bfe] p-6 lg:py-0 gap-3 flex flex-col md:flex-row items-center justify-center lg:justify-evenly lg:gap-32 px-12  lg:w-[90%] lg:h-80">
+        {/* <div className="flex flex-col justify-center items-center gap-3 lg:gap-5 ">
           <span className="flex text-3xl lg:text-5xl font-display  font-extrabold text-white items-center ">
             <CountUp className=" tracking-tighter  " end={276} /> k
           </span>
@@ -41,28 +41,28 @@ function Testimonials() {
           <span className="text-white text-xl lg:text-2xl font-semibold font-display  tracking-wide ">
             Worldwide Students
           </span>
-        </div>
+        </div> */}
         <div className="flex flex-col justify-center items-center gap-3 lg:gap-5 ">
           <span className="flex text-3xl lg:text-5xl font-display  font-extrabold text-white items-center ">
-            <CountUp className=" tracking-tighter  " end={23} /> +
+            <CountUp className=" tracking-tighter  " end={5} /> +
           </span>
           <hr className="w-[20%]  border-black border-2 " />
           <span className="text-white text-xl lg:text-2xl font-semibold font-display  tracking-wide ">
-            Years Experience
+            Year's Experience
           </span>
         </div>
         <div className="flex flex-col justify-center items-center gap-3 lg:gap-5 ">
           <span className="flex text-3xl lg:text-5xl font-display  font-extrabold text-white items-center ">
-            <CountUp className=" tracking-tighter  " end={735} /> +
+            <CountUp className=" tracking-tighter  " end={200} /> +
           </span>
           <hr className="w-[20%]  border-black border-2 " />
           <span className="text-white text-xl lg:text-2xl font-semibold font-display  tracking-wide ">
-            Professional Courses
+            Projects
           </span>
         </div>
         <div className="flex flex-col justify-center items-center gap-3 lg:gap-5 ">
           <span className="flex text-3xl lg:text-5xl font-display  font-extrabold text-white items-center ">
-            <CountUp className=" tracking-tighter  " end={5} /> k
+            <CountUp className=" tracking-tighter  " end={300} /> +
           </span>
           <hr className="w-[20%]  border-black border-2 " />
           <span className="text-white text-xl lg:text-2xl font-semibold font-display  tracking-wide ">

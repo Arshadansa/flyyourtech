@@ -8,6 +8,9 @@ function Navbar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const handlemenu = () => {
+    setIsMenuOpen(false);
+  };
   return (
     <nav className="font-display  w-full lg:pt-3 dark:bg-gray-900">
       <div className="max-w-screen-2xl flex gap-5 lg:gap-0 flex-wrap items-center justify-between mx-auto  lg:p-4">
@@ -60,6 +63,7 @@ function Navbar() {
                 to="home"
                 smooth={true}
                 duration={1000}
+                onClick={handlemenu}
                 className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase text-white hover:bg-gray-100 hover:text-black lg:hover:bg-[#050c36] lg:hover:text-white   rounded md:bg-transparent "
                 aria-current="page"
               >
@@ -71,6 +75,7 @@ function Navbar() {
                 to="about"
                 smooth={true}
                 duration={1000}
+                onClick={handlemenu}
                 className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 hover:text-black lg:hover:bg-[#050c36] lg:hover:text-white md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 About
@@ -81,6 +86,7 @@ function Navbar() {
                 to="OurServices"
                 smooth={true}
                 duration={1000}
+                onClick={handlemenu}
                 className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 hover:text-black lg:hover:bg-[#050c36] lg:hover:text-white md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Our Services
@@ -91,6 +97,7 @@ function Navbar() {
                 to="Freature"
                 smooth={true}
                 duration={1000}
+                onClick={handlemenu}
                 className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 hover:text-black lg:hover:bg-[#050c36] lg:hover:text-white md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Freature
@@ -101,6 +108,7 @@ function Navbar() {
                 to="contact"
                 smooth={true}
                 duration={1000}
+                onClick={handlemenu}
                 className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 hover:text-black lg:hover:bg-[#050c36] lg:hover:text-white md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Contact
