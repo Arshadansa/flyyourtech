@@ -68,9 +68,9 @@ function Contact() {
   };
 
   return (
-    <section className="w-full h-full 2xl:h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
+    <section className="w-full h-full md:h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
       <ContactNavbar />
-      <div className="max-w-screen-xl w-full p-3 flex-col lg:flex-row py-12 md:py-52 lg:py-24   flex items-center  justify-between mx-auto">
+      <div className="max-w-screen-xl w-full p-3 px-12  flex-col lg:flex-row lg:py-12  flex items-center  justify-between mx-auto">
         <img
           src="https://techy-xi.vercel.app/assets/img/page-title/img-01.png"
           className=" bottom-0 left-0 absolute z-0 "

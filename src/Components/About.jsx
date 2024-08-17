@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 function About() {
   const [inView, setInView] = useState(false);
@@ -70,15 +71,17 @@ function About() {
           <p className=" text-3xl  font-extrabold ">Agency & Solutions</p>
         </div>
         <div className="flex-col border-b  pb-5  flex ">
-          <span className=" text-[#989eaf]  text-lg">
-            Dramatically supply transparent deliverables before caward
+          <span className=" text-[#989eaf] leading-none  text-lg">
+            FlyYourTech delivers cutting-edge IT solutions that drive business
+            success.
           </span>
-          <span className=" text-[#989eaf]  leading-none text-lg">
-            comp internal or "organic" sources. Comp transparent and
+          <span className=" text-[#989eaf] mt-2 leading-none text-lg">
+            We specialize in custom, scalable technology with a focus on
+            transparency and impact.
           </span>
-          <span className=" text-[#989eaf]  text-lg">
+          {/* <span className=" text-[#989eaf]  text-lg">
             leverage backward other.
-          </span>
+          </span> */}
         </div>
         <div className="flex  pl-6 items-center gap-3 bg-white w-full h-20 rounded-md">
           <div className=" bg-[#e7eaf0] rounded-full border w-14 h-14  ">
@@ -107,9 +110,11 @@ function About() {
           </div>
         </div>
         <div className="mt-6">
-          <button className="text-white uppercase hover:bg-black  font-semibold  bg-[#913bfe] px-8  rounded-md py-4 text-md">
-            moredetails
-          </button>
+          <Link to="contact" smooth={true} duration={1000}>
+            <button className="text-white uppercase hover:bg-black  font-semibold  bg-[#913bfe] px-8  rounded-md py-4 text-md">
+              more details
+            </button>
+          </Link>
         </div>
       </motion.div>
     </section>

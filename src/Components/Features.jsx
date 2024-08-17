@@ -130,7 +130,7 @@ function Freature() {
             return (
               <>
                 <div
-                  className=" lg:h-96   h-80 w-80 lg:w-[470px] hover:cursor-pointer  hover:bg-[#913bfe] flex  pl-8 pt-8 items-end  border-t-2 border-l-2 border-r-2 ml-4 justify-end  "
+                  className=" lg:h-80   h-80 w-80 lg:w-[450px] hover:cursor-pointer  hover:bg-[#913bfe] flex  pl-8 pt-8 items-end  border-t-2 border-l-2 border-r-2 ml-4 justify-end  "
                   key={index}
                 >
                   <img

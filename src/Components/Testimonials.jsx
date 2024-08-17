@@ -26,7 +26,6 @@ function Testimonials() {
     };
   }, []);
 
- 
   return (
     <section
       ref={sectionRef}
@@ -84,10 +83,12 @@ function Testimonials() {
         </div>
         <div className="flex flex-col  items-center justify-center">
           <span className="text-[#a4a6cd] text-center text-lg font-semibold">
-            Dramatically supply transparent backward deliverables before
+            We are thrilled with the results! The team delivered transparent,
+            high-quality solutions that exceeded our expectations.
           </span>
-          <span className="text-[#a4a6cd] text-lg font-semibold">
-            caward comp internal or "organic" sources.
+          <span className="text-[#a4a6cd] text-center text-lg font-semibold">
+            Their commitment to excellence and ability to leverage both internal
+            and organic sources set them apart from the competition.
           </span>
         </div>
       </motion.div>

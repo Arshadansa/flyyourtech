@@ -36,7 +36,7 @@ function Home() {
         <OurServices />
       </Element>
 
-      <Element name="Freature" className="section">
+      <Element name="Feature" className="section">
         <Freature />
         <HowWork />
         <Testimonials />

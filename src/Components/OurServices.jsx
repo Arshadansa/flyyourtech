@@ -8,30 +8,28 @@ function OurServices() {
     {
       title: "Web Design",
       description: [
-        "Dramatically supply transparent",
-        "backward deliverables before caward",
-        "comp internal or 'organic' sources.",
+        "Delivering cutting-edge, transparent, and efficient web design solutions.",
+        "We ensure that your web presence is not only visually appealing but also user-friendly and accessible.",
+         " ",
       ],
-      projects: "324 Projects",
+      projects: "50 Projects Completed",
     },
 
     {
       title: "Web Development",
       description: [
-        "Efficiently aggregate user-friendly",
-        "models for frictionless deliverables",
-        "collaboratively enhance backward.",
+        "We specialize in building robust, user-friendly websites that cater to your business needs. ",
+        "Our development process is streamlined to produce frictionless deliverables, ensuring seamless user experiences.",
       ],
-      projects: "324 Projects",
+      projects: "50 Projects Completed",
     },
     {
       title: "UI/UX Design",
       description: [
-        "Efficiently aggregate user-friendly",
-        "models for frictionless deliverables",
-        "collaboratively enhance backward.",
+        "Our UI/UX design services focus on creating intuitive and engaging user interfaces.",
+        "We aim to provide designs that are both aesthetically pleasing and functionally effective, enhancing user satisfaction.",
       ],
-      projects: "500 Projects",
+      projects: "50 Projects Completed",
     },
   ];
 
@@ -39,31 +37,43 @@ function OurServices() {
     {
       title: "Web Security",
       description: [
-        "Efficiently aggregate user-friendly",
-        "models for frictionless deliverables",
-        "collaboratively enhance backward.",
+        "Our team is dedicated to securing your web assets.",
+        "We offer comprehensive web security services that protect your data and ensure the integrity of your online presence.",
       ],
-      projects: "500 Projects",
+      projects: "50 Projects Completed",
     },
     {
       title: "Digital Marketing",
       description: [
-        "Efficiently aggregate user-friendly",
-        "models for frictionless deliverables",
-        "collaboratively enhance backward.",
+        "Boost your online presence with our digital marketing services.",
+        "We employ innovative strategies to increase your visibility and drive engagement across all digital platforms.",
       ],
-      projects: "500 Projects",
+      projects: "50 Projects Completed",
     },
     {
       title: "Programming",
       description: [
-        "Efficiently aggregate user-friendly",
-        "models for frictionless deliverables",
-        "collaboratively enhance backward.",
+        "We provide top-notch programming services, creating efficient and scalable solutions tailored to your specific requirements.",
+        "Our team ensures that all deliverables are user-friendly and aligned with your business goals.",
       ],
-      projects: "500 Projects",
+      projects: "50 Projects Completed",
     },
-    // Add more objects here as needed
+    {
+      title: "App Development",
+      description: [
+        "We create high-performing, feature-rich mobile applications that cater to a wide range of business needs.",
+        "Our development process is focused on delivering apps that provide a seamless user experience.",
+      ],
+      projects: "100 Projects Completed",
+    },
+    {
+      title: "Blockchain Development",
+      description: [
+        "Stay ahead with our blockchain development services.",
+        "We offer secure and transparent solutions that leverage the latest in blockchain technology to enhance your business operations.",
+      ],
+      projects: "100 Projects Completed",
+    },
   ];
 
   const [inView, setInView] = useState(false);
@@ -74,7 +84,7 @@ function OurServices() {
       ([entry]) => {
         setInView(entry.isIntersecting);
       },
-      { threshold: 0.2 } // Trigger when at least 10% of the element is visible
+      { threshold: 0.1 } // Trigger when at least 10% of the element is visible
     );
 
     if (sectionRef.current) {
@@ -96,7 +106,7 @@ function OurServices() {
       ref={sectionRef}
       className="max-w-screen-xl  lg:p-0 lg:pt-56 mx-auto"
     >
-      <div className="flex justify-center items-center lg:items-start lg:justify-normal gap-6 flex-col">
+      <div className="flex justify-center items-center xl:items-start xl:justify-normal gap-6 flex-col">
         <div>
           <span className=" text-white   text-3xl font-display font-extrabold">
             Our Services
@@ -106,15 +116,19 @@ function OurServices() {
           initial={{ x: "-20vw", opacity: 0 }}
           animate={{ x: inView ? 0 : "-20vw", opacity: inView ? 1 : 0 }}
           transition={{ type: "spring", stiffness: 30, damping: 20 }}
-          className="flex  flex-col justify-center items-center lg:items-start lg:justify-normal text-xl font-display tracking-tighter font-medium text-[#727993]"
+          className="flex px-4 md:px-0 flex-col justify-center items-center lg:items-start lg:justify-normal text-xl font-display tracking-tighter font-medium text-[#727993]"
         >
           <span className=" text-center ">
-            Dramatically supply transparent backward deliverables before
+            We offer a wide range of services tailored to meet your digital
+            needs.
           </span>
-          <span>caward comp internal or "organic" sources.</span>
+          <span className=" text-center ">
+            Each of our services is designed to deliver high-quality results
+            that exceed expectations.
+          </span>
         </motion.div>
 
-        <motion.div className="grid mt-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div className="grid mt-5 p-3  mx-auto xl:mx-0 lg:p-0 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {cardData.map((card, index) => (
             <motion.div
               key={index}
@@ -128,18 +142,18 @@ function OurServices() {
               }}
               onMouseEnter={() => setHoverText(!hovertext)}
               onMouseLeave={() => setHoverText(!hovertext)}
-              className={` relative lg:w-96 p-6 lg:p-8 lg:h-92 border-[#50557b] border-2 group overflow-hidden`}
+              className={` relative lg:w-96 gap-4 flex flex-col justify-between  p-6  lg:p-8 lg:h-92 border-[#50557b] border-2 group  `}
             >
               <div className="absolute inset-0 bg-[#913bfe] text-white bottom-full group-hover:bottom-0 transition-all duration-500 ease-in-out"></div>
 
-              <div className="relative z-10">
+              <div className="relative   z-20">
                 <div className="w-full flex items-end justify-end">
                   <GoArrowUpRight
                     size={35}
                     className="text-white hover:cursor-pointer"
                   />
                 </div>
-                <div className="mb-6">
+                <div className="">
                   <IoCodeSlash
                     size={70}
                     className={` ${
@@ -153,14 +167,14 @@ function OurServices() {
                   </span>
                 </div>
               </div>
-              <div className="flex mt-4 flex-col gap-8 relative z-10">
-                <div className="flex flex-col font-display">
+              <div className="flex   flex-col gap-8 relative z-10">
+                <div className="flex  flex-col font-display">
                   {card.description.map((desc, descIndex) => (
                     <span
                       key={descIndex}
                       className={`${
                         hovertext ? "text-white" : "text-[#686e8e]"
-                      } text-md lg:text-lg`}
+                      } text-md lg:text-justify lg:text-lg`}
                     >
                       {desc}
                     </span>
@@ -176,7 +190,7 @@ function OurServices() {
           ))}
         </motion.div>
 
-        <motion.div className="grid mt-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div className="grid  mt-8 xl:mx-0 p-3 lg:p-0 mx-auto grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {cardData1.map((card, index) => (
             <motion.div
               key={index}
@@ -190,7 +204,7 @@ function OurServices() {
               }}
               onMouseEnter={() => setHoverTextNext(!hovertextNext)}
               onMouseLeave={() => setHoverTextNext(!hovertextNext)}
-              className={` relative lg:w-96 p-8 lg:h-92 border-[#50557b] border-2 group overflow-hidden`}
+              className={` relative flex flex-col justify-between lg:w-96 p-6 lg:h-92 border-[#50557b] border-2 group overflow-hidden`}
             >
               <div className="absolute inset-0 bg-[#913bfe] text-white bottom-full group-hover:bottom-0 transition-all duration-500 ease-in-out"></div>
 
@@ -222,7 +236,7 @@ function OurServices() {
                       key={descIndex}
                       className={`${
                         hovertextNext ? "text-white" : "text-[#686e8e]"
-                      } text-md lg:text-lg`}
+                      } text-md lg:text-justify lg:text-lg`}
                     >
                       {desc}
                     </span>

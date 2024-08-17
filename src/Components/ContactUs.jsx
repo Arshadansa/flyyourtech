@@ -16,7 +16,7 @@ function ContactUs() {
         <div className="flex z-20 items-center justify-center">
           <Link to="/contact">
             <button className="text-white  uppercase hover:bg-black z-20  bg-[#913bfe] px-7  font-semibold rounded-md py-3 text-md">
-              Contactus
+              Contact Us
             </button>
           </Link>
         </div>

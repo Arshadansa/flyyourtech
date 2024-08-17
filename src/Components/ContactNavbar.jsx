@@ -82,7 +82,7 @@ function ContactNavbar() {
                   <span className="block py-2 px-3 hover:cursor-pointer md:p-0 text-white rounded">
                     Phone
                   </span>
-                  <span className="font-extrabold">+91 747 706 6373</span>
+                  <span className="font-extrabold">+917470391011</span>
                 </div>
               </a>
             </li>

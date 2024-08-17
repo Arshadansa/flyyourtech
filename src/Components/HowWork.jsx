@@ -85,7 +85,7 @@ function HowWork() {
       ref={sectionRef}
       className="max-w-screen-xl py-20 p-3  lg:py-56 mx-auto"
     >
-      <div className="flex items-center justify-center lg:items-start lg:justify-normal flex-wrap gap-6 flex-col">
+      <div className="flex items-center justify-center xl:items-start xl:justify-normal flex-wrap gap-6 flex-col">
         <div>
           <span className=" text-white text-3xl font-display font-extrabold">
             How It Works
@@ -104,7 +104,7 @@ function HowWork() {
           <span>caward comp internal or "organic" sources.</span>
         </motion.div>
 
-        <motion.div className="grid mt-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div className="grid w-full lg:w-fit lg:mt-8 grid-cols-1 relative  md:grid-cols-2 xl:grid-cols-3 gap-8 ">
           {cardData.map((card, index) => (
             <motion.div
               key={index}
@@ -118,7 +118,7 @@ function HowWork() {
               }}
               onMouseEnter={() => setHoverText(!hovertext)}
               onMouseLeave={() => setHoverText(!hovertext)}
-              className={` relative gap-6  lg:w-96 p-6 lg:h-96 flex flex-col justify-center bg-[#05103d]  shadow-xl  group overflow-hidden`}
+              className={` relative gap-6 p-4  lg:w-96  lg:h-96 flex flex-col justify-center bg-[#05103d]  shadow-xl  group overflow-hidden`}
             >
               <div className="relative flex flex-col gap-8 z-10">
                 <div className="border relative flex items-center justify-center overflow-hidden  border-[#2f3b65] mb-4 rounded-full h-32 w-32">
@@ -163,7 +163,7 @@ function HowWork() {
           ))}
         </motion.div>
 
-        <div className="grid lg:mt-8 grid-cols-1 relative  md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div className="grid lg:mt-8 grid-cols-1 relative  md:grid-cols-2 xl:grid-cols-3 gap-8">
           {cardData1.map((card, index) => (
             <>
               <motion.div
@@ -178,8 +178,8 @@ function HowWork() {
                 }}
                 onMouseEnter={() => setHoverTextNext(!hovertextNext)}
                 onMouseLeave={() => setHoverTextNext(!hovertextNext)}
-                className={` relative gap-6 lg:w-96 p-6 h-96 flex flex-col justify-center bg-[#05103d]  shadow-xl  group overflow-hidden`}
-              >
+                className={` relative gap-6 p-4 lg:w-96  lg:h-96 flex flex-col justify-center bg-[#05103d]  shadow-xl  group overflow-hidden`}
+                >
                 <div className="relative flex flex-col gap-8 z-10">
                   <div className="border relative flex items-center justify-center overflow-hidden  border-[#2f3b65] mb-4 rounded-full h-32 w-32">
                     <div className="absolute inset-0 bg-[#913bfe] text-white left-full group-hover:left-0 transition-all duration-500 ease-in-out"></div>
@@ -238,7 +238,7 @@ function HowWork() {
               </motion.div>
             </>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
