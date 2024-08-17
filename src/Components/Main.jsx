@@ -38,7 +38,7 @@ function Main() {
           Solutions
         </p>
       </div>
-      <div className="mt-10  relative ">
+      <div className="mt-10 z-30  relative ">
         <Link to="contact" smooth={true} duration={1000}>
           <button className="text-white hover:bg-black z-20  bg-[#913bfe] px-8  rounded-md py-2 text-lg">
             GET STARTED NOW

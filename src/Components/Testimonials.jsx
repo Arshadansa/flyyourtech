@@ -81,7 +81,7 @@ function Testimonials() {
             Testimonials
           </span>
         </div>
-        <div className="flex flex-col  items-center justify-center">
+        <div className="flex flex-col p-3  items-center lg:justify-center">
           <span className="text-[#a4a6cd] text-center text-lg font-semibold">
             We are thrilled with the results! The team delivered transparent,
             high-quality solutions that exceeded our expectations.

@@ -11,7 +11,7 @@ import brand2 from "../Assest/Images/dongo.png";
 import brand3 from "../Assest/Images/p6.png";
 import brand4 from "../Assest/Images/Screenshot (456).png";
 import brand5 from "../Assest/Images/Screenshot (458).png";
-import brand6 from "../Assest/Images/Screenshot (461).png";
+import brand6 from "../Assest/Images/Screenshot (464).png";
 import brand7 from "../Assest/Images/Screenshot (460).png";
 
 function Freature() {
@@ -45,7 +45,7 @@ function Freature() {
     },
     tablet: {
       breakpoint: { max: 1024, min: 768 },
-      items: 2,
+      items: 1,
       slidesToSlide: 2, // optional, default to 1.
     },
     mobile: {
@@ -57,33 +57,33 @@ function Freature() {
   const sliderImageUrl = [
     {
       url: brand1,
-      title: "Web Design",
-      des: "Web Analytics",
+      title: "Moye ",
+      des: "BLOCKCHAIN",
     },
     {
       url: brand2,
-      title: "Mobile info",
-      des: "Upcoming phone",
+      title: "Dongo ai",
+      des: "Web Analytics",
     },
     {
       url: brand3,
-      title: "Cyber secure",
+      title: "StudentHq.in",
       des: "Web Analytics",
     },
     {
       url: brand4,
-      title: "Web Design",
-      des: "Web Analytics",
+      title: "Nebula ai",
+      des: "BLOCKCHAIN",
     },
     {
       url: brand6,
-      title: "Web Design",
-      des: "Web Analytics",
+      title: "HodlSwap",
+      des: "BLOCKCHAIN",
     },
     {
       url: brand7,
-      title: "Mobile info",
-      des: "Upcoming phone",
+      title: "Xelsior",
+      des: "BLOCKCHAIN",
     },
     {
       url: brand5,
@@ -115,7 +115,7 @@ function Freature() {
           <span className=" leading-tight text-center lg:text-start ">caward comp internal or "organic" sources.</span>
         </motion.div>
       </div>
-      <div className=" ">
+      <div className="  ">
         <Carousel
           responsive={responsive}
           autoPlay={true}
@@ -129,13 +129,15 @@ function Freature() {
           {sliderImageUrl.map((imageUrl, index) => {
             return (
               <>
+              <div className=" flex items-center justify-center w-full h-fit flex-col">
+
                 <div
-                  className=" lg:h-80   h-80 w-80 lg:w-[450px] hover:cursor-pointer  hover:bg-[#913bfe] flex  pl-8 pt-8 items-end  border-t-2 border-l-2 border-r-2 ml-4 justify-end  "
+                  className=" lg:h-80  w-76   h-76 sm:h-96 sm:w-[450px] lg:w-[450px] hover:cursor-pointer  hover:bg-[#913bfe] flex  pl-8 pt-8 items-end  border-t-2 border-l-2 border-r-2 ml-4 justify-end  "
                   key={index}
                 >
                   <img
                     src={imageUrl.url}
-                    className="w-full  h-full"
+                    className=" w-full object-fill  h-full "
                     alt="movie"
                   />
                 </div>
@@ -143,6 +145,7 @@ function Freature() {
                   <div className="text-[#b0b5d2] text-xl">{imageUrl.title}</div>
                   <div className="text-white text-3xl font-extrabold font-display ">{imageUrl.des}</div>
                 </div>
+              </div>
               </>
             );
           })}

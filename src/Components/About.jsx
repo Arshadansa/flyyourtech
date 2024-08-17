@@ -28,7 +28,7 @@ function About() {
   return (
     <section
       ref={sectionRef}
-      className="max-w-screen-xl p-3 py-20 flex-col lg:flex-row gap-10 overflow-hidden flex justify-center items-center text-white mx-auto  "
+      className="max-w-screen-xl p-3 py-12 flex-col lg:flex-row gap-10 overflow-hidden flex justify-center items-center text-white mx-auto  "
     >
       <motion.div
         className=" lg:w-[60%]  "

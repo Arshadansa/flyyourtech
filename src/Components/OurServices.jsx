@@ -104,7 +104,7 @@ function OurServices() {
   return (
     <section
       ref={sectionRef}
-      className="max-w-screen-xl  lg:p-0 lg:pt-56 mx-auto"
+      className="max-w-screen-xl  lg:p-0 py-8 lg:pt-40 mx-auto"
     >
       <div className="flex justify-center items-center xl:items-start xl:justify-normal gap-6 flex-col">
         <div>

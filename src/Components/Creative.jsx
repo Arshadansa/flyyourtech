@@ -3,8 +3,8 @@ import Slider from "./Silder";
 
 function Creative() {
   return (
-    <section className="flex flex-col w-full  gap-24 lg:py-32 ">
-      <div class="relative lg:mb-32 flex bg-[#913bfe] overflow-x-hidden  font-display font-semibold lg:-rotate-[6deg]">
+    <section className="flex flex-col w-full  gap-24 lg:py-20 ">
+      <div class="relative lg:mb-10  flex bg-[#913bfe] overflow-x-hidden  font-display font-semibold lg:-rotate-[6deg]">
         <div class="py-4 animate-marquee whitespace-nowrap">
           <span class="text-4xl text-white mx-4">
             Technology to elevate our human experience.
@@ -44,7 +44,7 @@ function Creative() {
           </span>
         </div>
       </div>
-      <Slider />
+      {/* <Slider /> */}
     </section>
   );
 }

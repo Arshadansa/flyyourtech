@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { IoLogoTwitter } from "react-icons/io";
-import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -119,37 +119,37 @@ function Footer() {
             Reserved.
           </span>
           <div class="flex mt-12 sm:justify-center  space-x-5 rtl:space-x-reverse">
-            <a
-              href="#"
-              class="text-white  p-3 hover:bg-[#913bfe] rounded-md border-[#1d254c] border-2 dark:hover:text-white"
-            >
-              <FaFacebookF className=" cursor-pointer" size={22} />
+          <a
+            href="https://www.instagram.com/fly_your_tech/?igsh=MXBoZXcxYWJrbm4xZQ%3D%3D"
+            class="text-white  p-3 hover:bg-[#913bfe] rounded-md border-[#1d254c] border-2 dark:hover:text-white"
+          >
+            <FaInstagram className=" cursor-pointer" size={22} />
 
-              <span class="sr-only">Facebook page</span>
-            </a>
-            <a
+            <span class="sr-only">Instagram page</span>
+          </a>
+            {/* <a
               href="#"
               class="text-white  p-3 hover:bg-[#913bfe] rounded-md border-[#1d254c] border-2 dark:hover:text-white"
             >
               <IoLogoTwitter className=" cursor-pointer" size={22} />
               <span className="sr-only">Twitter page</span>
-            </a>
+            </a> */}
             <a
-              href="#"
+              href="https://www.linkedin.com/groups/14502365"
               class="text-white  p-3 hover:bg-[#913bfe] rounded-md border-[#1d254c] border-2 dark:hover:text-white"
             >
               <FaLinkedinIn className=" cursor-pointer" size={22} />
 
               <span className="sr-only">LinkedIn page</span>
             </a>
-            <a
+            {/* <a
               href="#"
               class="text-white  p-3 hover:bg-[#913bfe] rounded-md border-[#1d254c] border-2 dark:hover:text-white"
             >
               <FaYoutube className=" cursor-pointer" size={22} />
 
               <span className="sr-only">YouTube page</span>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import ContactNavbar from "../Components/ContactNavbar";
-import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import {
   IoLocationOutline,
   IoLogoTwitter,
@@ -68,9 +68,9 @@ function Contact() {
   };
 
   return (
-    <section className="w-full h-full md:h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
+    <section className="w-full h-full  sm:h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
       <ContactNavbar />
-      <div className="max-w-screen-xl w-full p-3 px-12  flex-col lg:flex-row lg:py-12  flex items-center  justify-between mx-auto">
+      <div className="max-w-screen-xl py-8  w-full p-3 px-12  flex-col lg:flex-row lg:py-12  flex items-center  justify-between mx-auto">
         <img
           src="https://techy-xi.vercel.app/assets/img/page-title/img-01.png"
           className=" bottom-0 left-0 absolute z-0 "
@@ -158,18 +158,12 @@ function Contact() {
                   value={form.name}
                   onChange={handleChange}
                   name="name"
-                  className={`appearance-none block w-full bg-gray-200 text-black border ${
-                    !form.name ? "border-red-500" : "border-gray-300"
+                  className={`appearance-none block w-full bg-gray-200 text-black border border-gray-300
                   } rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`}
                   id="grid-first-name"
                   type="text"
                   placeholder="JaneDoe"
                 />
-                {!form.name && (
-                  <p className="text-red-500 text-xs italic">
-                    Please fill out this field.
-                  </p>
-                )}
               </div>
               <div class="w-full md:w-1/2 px-3">
                 <label
@@ -233,36 +227,36 @@ function Contact() {
         </span>
         <div class="flex lg:mt-6 mb-3 sm:justify-center  lg:space-x-5 space-x-10 rtl:space-x-reverse">
           <a
-            href="#"
+            href="https://www.instagram.com/fly_your_tech/?igsh=MXBoZXcxYWJrbm4xZQ%3D%3D"
             class="text-white  p-3 hover:bg-[#913bfe] rounded-md border-[#1d254c] border-2 dark:hover:text-white"
           >
-            <FaFacebookF className=" cursor-pointer" size={22} />
+            <FaInstagram className=" cursor-pointer" size={22} />
 
-            <span class="sr-only">Facebook page</span>
+            <span class="sr-only">Instagram page</span>
           </a>
-          <a
+          {/* <a
             href="#"
             class="text-white  p-3 hover:bg-[#913bfe] rounded-md border-[#1d254c] border-2 dark:hover:text-white"
           >
             <IoLogoTwitter className=" cursor-pointer" size={22} />
             <span className="sr-only">Twitter page</span>
-          </a>
+          </a> */}
           <a
-            href="#"
+            href="https://www.linkedin.com/groups/14502365"
             class="text-white  p-3 hover:bg-[#913bfe] rounded-md border-[#1d254c] border-2 dark:hover:text-white"
           >
             <FaLinkedinIn className=" cursor-pointer" size={22} />
 
             <span className="sr-only">LinkedIn page</span>
           </a>
-          <a
+          {/* <a
             href="#"
             class="text-white  p-3 hover:bg-[#913bfe] rounded-md border-[#1d254c] border-2 dark:hover:text-white"
           >
             <FaYoutube className=" cursor-pointer" size={22} />
 
             <span className="sr-only">YouTube page</span>
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

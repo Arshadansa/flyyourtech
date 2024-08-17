@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { Link } from "react-scroll";
+import logo from "../Assest/Images/IMG_20240817_131018-removebg.png";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,9 +21,7 @@ function Navbar() {
           duration={1000}
           className="flex hover:cursor-pointer items-center space-x-3 rtl:space-x-reverse"
         >
-          <span className="self-center  font-bold text-2xl whitespace-nowrap text-white">
-            FLY YOUR TECH
-          </span>
+          <img src={logo} alt="logo" className="w-24 object-contain h-16" />
         </Link>
         <div className="flex  md:hidden md:order-2  md:gap-4 ">
           <button
@@ -100,7 +99,7 @@ function Navbar() {
                 onClick={handlemenu}
                 className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 hover:text-black lg:hover:bg-[#050c36] lg:hover:text-white md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
-                Feature 
+                Feature
               </Link>
             </li>
             <li>

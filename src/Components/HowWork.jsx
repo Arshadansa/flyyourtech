@@ -163,7 +163,7 @@ function HowWork() {
           ))}
         </motion.div>
 
-        <motion.div className="grid lg:mt-8 grid-cols-1 relative  md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <motion.div className="grid w-full lg:mt-8 grid-cols-1 relative  md:grid-cols-2 xl:grid-cols-3 gap-8">
           {cardData1.map((card, index) => (
             <>
               <motion.div
