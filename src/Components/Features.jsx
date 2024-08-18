@@ -67,12 +67,12 @@ const sliderImageUrl = [
     {
       url: brand2,
       title: "Gitrum",
-      des: "help open-source community ",
+      des: "Web Site",
     },
     {
       url: brand3,
       title: "StudentHq.in",
-      des: "Web Analytics",
+      des: "Web Site",
     },
     {
       url: brand4,

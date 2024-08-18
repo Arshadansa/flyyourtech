@@ -78,7 +78,7 @@ function Contact() {
   };
 
   return (
-    <section className="w-full h-full  2xl:h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
+    <section className="w-full h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
       <ContactNavbar />
       <div className="max-w-screen-xl pl-8 my-6 md:my-0 2xl:pl-0 relative z-30 flex items-center gap- w-full mx-auto ">
         <div className="flex items-center gap-1 ">
