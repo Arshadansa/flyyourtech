@@ -1,7 +1,12 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import ContactNavbar from "../Components/ContactNavbar";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa6";
 import {
   IoLocationOutline,
   IoLogoTwitter,
@@ -9,11 +14,14 @@ import {
 } from "react-icons/io5";
 import { MdOutlinePhone } from "react-icons/md";
 import emailjs from "@emailjs/browser";
+import { IoIosArrowForward } from "react-icons/io";
+import { GoDotFill } from "react-icons/go";
 
 function Contact() {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
+    phone: "",
     email: "",
     message: "",
   });
@@ -44,6 +52,7 @@ function Contact() {
           from_email: form.email,
           to_email: "flyyourtech@gmail.com",
           message: form.message,
+          phone: form.phone,
         },
         "RyALEi70XU6pe4wsL"
       )
@@ -56,6 +65,7 @@ function Contact() {
             name: "",
             email: "",
             message: "",
+            phone: "",
           });
         },
         (error) => {
@@ -68,8 +78,22 @@ function Contact() {
   };
 
   return (
-    <section className="w-full h-full  sm:h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
+    <section className="w-full h-full  2xl:h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
       <ContactNavbar />
+      <div className="max-w-screen-xl pl-8 my-6 md:my-0 2xl:pl-0 relative z-30 flex items-center gap- w-full mx-auto ">
+        <div className="flex items-center gap-1 ">
+          <a href="/">
+            <span className="text-white hover:cursor-pointer hover:text-[#913bfe]">
+              Home
+            </span>
+          </a>
+          <div className="mt-1">
+            <IoIosArrowForward className="text-white" />
+            {/* <GoDotFill className="text-white text-sm" /> */}
+          </div>
+          <span className="text-white ">Contact</span>
+        </div>
+      </div>
       <div className="max-w-screen-xl py-8  w-full p-3 px-12  flex-col lg:flex-row lg:py-12  flex items-center  justify-between mx-auto">
         <img
           src="https://techy-xi.vercel.app/assets/img/page-title/img-01.png"
@@ -170,23 +194,39 @@ function Contact() {
                   class="block uppercase tracking-wide text-white text-xs font-bold mb-2"
                   for="grid-last-name"
                 >
-                  Your Email
+                  Phone Number
                 </label>
                 <input
-                  value={form.email}
+                  value={form.phone}
                   onChange={handleChange}
-                  name="email"
+                  name="phone"
                   class="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-last-name"
-                  type="email"
-                  placeholder="Doe@gmail.com"
+                  type="number"
+                  placeholder="+91 667 345 4556"
                 />
               </div>
             </div>
-
+            <div className="w-full ">
+              <label
+                class="block uppercase tracking-wide text-white text-xs font-bold mb-2"
+                for="grid-last-name"
+              >
+                Your Email
+              </label>
+              <input
+                value={form.email}
+                onChange={handleChange}
+                name="email"
+                class="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-last-name"
+                type="email"
+                placeholder="Doe@gmail.com"
+              />
+            </div>
             <label
               for="message"
-              class="block mb-2 text-sm font-medium text-white dark:text-white"
+              class="block mt-6 mb-2 text-sm font-medium text-white dark:text-white"
             >
               Your message
             </label>
@@ -202,7 +242,7 @@ function Contact() {
               onChange={handleChange}
               rows="4"
               class="block p-2.5 w-full text-sm text-black  rounded-lg border border-gray-300  "
-              placeholder="Leave a comment..."
+              placeholder="Leave a Message..."
             ></textarea>
             <div className="  w-full flex items-center lg:justify-normal justify-center">
               <button

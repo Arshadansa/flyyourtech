@@ -54,7 +54,11 @@ function Freature() {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
-  const sliderImageUrl = [
+
+ const brand2="https://cdn.dribbble.com/userupload/15714132/file/original-4bb558ff64b6d5d1b8af270333dcfb9f.png?resize=752x"
+const brand7="https://cdn.dribbble.com/userupload/14974069/file/original-5f07548753b7ce5917110b37962276b8.png?resize=752x"
+const brand5="https://cdn.dribbble.com/userupload/10620234/file/original-5daa1d3801d26c2a160b4b0be00ca594.png?resize=752x"  
+const sliderImageUrl = [
     {
       url: brand1,
       title: "Moye ",
@@ -62,8 +66,8 @@ function Freature() {
     },
     {
       url: brand2,
-      title: "Dongo ai",
-      des: "Web Analytics",
+      title: "Gitrum",
+      des: "help open-source community ",
     },
     {
       url: brand3,
@@ -82,13 +86,13 @@ function Freature() {
     },
     {
       url: brand7,
-      title: "Xelsior",
+      title: "Frontier",
       des: "BLOCKCHAIN",
     },
     {
       url: brand5,
-      title: "Cyber secure",
-      des: "Web Analytics",
+      title: "VR Meditation",
+      des: "Meditation app",
     },
   ];
 

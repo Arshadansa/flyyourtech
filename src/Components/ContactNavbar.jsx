@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { IoLocationOutline, IoTimeOutline } from "react-icons/io5";
 import { MdOutlinePhone } from "react-icons/md";
+import logo from "../Assest/Images/IMG_20240817_131018-removebg.png";
+
 
 function ContactNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,9 +15,10 @@ function ContactNavbar() {
     <nav className="z-20 relative">
       <div className="max-w-screen-2xl lg:px-12 pt-6 flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span className="self-center uppercase text-2xl font-semibold whitespace-nowrap text-white">
-            Fly Your Tech
-          </span>
+          <div className="flex items-center gap-0">
+            <img src={logo} alt="logo" className="w-18 object-contain h-14" />{" "}
+            <span className=" text-white text-xl"> FLY Your Tech</span>
+          </div>
         </a>
         <button
           data-collapse-toggle="navbar-solid-bg"

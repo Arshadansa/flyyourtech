@@ -3,8 +3,8 @@ import { GoArrowUpRight } from "react-icons/go";
 import { IoLogoTwitter } from "react-icons/io";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
+import { Link } from "react-scroll";
 
 function Footer() {
   const [inView, setInView] = useState(false);
@@ -52,7 +52,7 @@ function Footer() {
             <ul className="text-white dark:text-gray-400 font-medium">
               <li className="mb-4 flex items-center">
                 <a
-                  href="#"
+                  href="https://wa.me/message/IOLXVXKLJ4SLM1"
                   className="tracking-tighter text-4xl lg:text-5xl font-display font-extrabold"
                 >
                   Let’s Chat
@@ -74,13 +74,13 @@ function Footer() {
               </h2>
             </Link>
             <ul class="text-white text-lg   dark:text-gray-400 font-medium">
-              <Link to="/contact" smooth={true} duration={1000} class="  ">
+              <a href={"/contact"} >
                 <li className="hover:pl-2  mb-4 hover:cursor-pointer">
                   Contact Us
                 </li>
-              </Link>
+              </a>
 
-              <li class="hover:pl-2 mb-4 hover:cursor-pointer ">
+              {/* <li class="hover:pl-2 mb-4 hover:cursor-pointer ">
                 <a href="#" class="">
                   Policy
                 </a>
@@ -89,7 +89,7 @@ function Footer() {
                 <a href="#" class="">
                   Refund
                 </a>
-              </li>
+              </li> */}
             </ul>
           </motion.div>
 
@@ -97,13 +97,13 @@ function Footer() {
             initial={{ x: "+10vw", opacity: 0.5 }}
             animate={{ x: inView ? 0 : "+10vw", opacity: inView ? 1 : 0 }}
             transition={{ type: "spring", stiffness: 30, damping: 10 }}
-            className="justify-self-end"
+            className="lg:justify-self-end"
           >
             <h2 class="mb-6 text-xl font-display font-extrabold text-white  dark:text-white">
               Flyyourtech@gmail.com
             </h2>
             <ul class="text-white dark:text-gray-400">
-              <li class="mb-4">
+              <li class="lg:mb-4">
                 <span class=" text-xl">
                   Building 56 , Ward 2 , Amarpatan Road ,Ramnagar, Satna , (M.P)
                   , INDIA

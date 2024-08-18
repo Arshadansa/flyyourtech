@@ -19,15 +19,18 @@ function Navbar() {
           to="home"
           smooth={true}
           duration={1000}
-          className="flex hover:cursor-pointer items-center space-x-3 rtl:space-x-reverse"
+          className="flex hover:cursor-pointer items-center  rtl:space-x-reverse"
         >
-          <img src={logo} alt="logo" className="w-24 object-contain h-16" />
+          <div className="flex items-center gap-0">
+            <img src={logo} alt="logo" className="w-18 object-contain h-14" />{" "}
+            <span className=" text-white text-xl"> FLY Your Tech</span>
+          </div>
         </Link>
         <div className="flex  md:hidden md:order-2  md:gap-4 ">
           <button
             data-collapse-toggle="navbar-cta"
             type="button"
-            className="inline-flex items-center borderp-2 w-10 h-10 justify-center text-sm text-white border rounded-full sm:hidden "
+            className="inline-flex items-center borderp-2 w-10 h-10 justify-center text-sm text-white border rounded-full md:hidden "
             aria-controls="navbar-cta"
             aria-expanded={isMenuOpen}
             onClick={toggleMenu}
