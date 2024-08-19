@@ -104,7 +104,7 @@ const sliderImageUrl = [
       <div className="flex lg:pl-32 items-center lg:items-start lg:justify-normal justify-center gap-6 flex-col">
         <div className="text-center">
           <span className=" text-center text-white text-3xl font-display font-extrabold">
-            Featured Works
+            Recent Projects
           </span>
         </div>
         <motion.div

@@ -49,9 +49,12 @@ function Footer() {
               <br />
               Consultants
             </h2>
+           
             <ul className="text-white dark:text-gray-400 font-medium">
               <li className="mb-4 flex items-center">
+          
                 <a
+                  target="_blank"
                   href="https://wa.me/message/IOLXVXKLJ4SLM1"
                   className="tracking-tighter text-4xl lg:text-5xl font-display font-extrabold"
                 >
