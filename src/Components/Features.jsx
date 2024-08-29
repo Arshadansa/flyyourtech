@@ -103,7 +103,7 @@ function Freature() {
   return (
     <section
       ref={sectionRef}
-      className="max-w-screen-2xl p-3 flex flex-col  gap-16 pt-32 lg:pt-52 mx-auto "
+      className="max-w-screen-2xl p-3 flex flex-col  gap-16 pt-32 lg:pt-44 mx-auto "
     >
       <div className="flex lg:pl-32 items-center lg:items-start lg:justify-normal justify-center gap-6 flex-col">
         <div className="text-center">
