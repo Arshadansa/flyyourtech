@@ -10,6 +10,8 @@ import HowWork from "../Components/HowWork";
 import Testimonials from "../Components/Testimonials";
 import ContactUs from "../Components/ContactUs";
 import { Element } from "react-scroll";
+import Pricing from "../Components/Pricing";
+import PricingDropDown from "../Components/PricingDropDown";
 
 function Home() {
   return (
@@ -39,6 +41,7 @@ function Home() {
       <Element name="Feature" className="section">
         <Freature />
         <HowWork />
+        <PricingDropDown />
         <Testimonials />
       </Element>
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoLocationOutline, IoTimeOutline } from "react-icons/io5";
 import { MdOutlinePhone } from "react-icons/md";
 import logo from "../Assest/Images/IMG_20240817_131018-removebg.png";
+import { Link } from "react-router-dom";
 
 
 function ContactNavbar() {
@@ -14,12 +15,12 @@ function ContactNavbar() {
   return (
     <nav className="z-20 relative">
       <div className="max-w-screen-2xl lg:px-12 pt-6 flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <div className="flex items-center gap-0">
             <img src={logo} alt="logo" className="w-18 object-contain h-14" />{" "}
             <span className=" text-white text-xl"> FLY Your Tech</span>
           </div>
-        </a>
+        </Link>
         <button
           data-collapse-toggle="navbar-solid-bg"
           type="button"

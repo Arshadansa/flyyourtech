@@ -56,6 +56,7 @@ function TestimonialsCarousel() {
         swipeable={true}
         showArrows={false}
         showStatus={false}
+        
         className="w-[400px] sm:w-[550px]   md:w-[100%]"
       >
         {testimonials.map((testimonial, index) => (

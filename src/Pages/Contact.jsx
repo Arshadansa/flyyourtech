@@ -16,8 +16,13 @@ import { MdOutlinePhone } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import { IoIosArrowForward } from "react-icons/io";
 import { GoDotFill } from "react-icons/go";
+import { useLocation } from "react-router-dom";
+
 
 function Contact() {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const selectedPlan = params.get("plan");
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -53,6 +58,7 @@ function Contact() {
           to_email: "flyyourtech@gmail.com",
           message: form.message,
           phone: form.phone,
+          plan: selectedPlan,
         },
         "RyALEi70XU6pe4wsL"
       )
@@ -92,6 +98,7 @@ function Contact() {
             {/* <GoDotFill className="text-white text-sm" /> */}
           </div>
           <span className="text-white ">Contact</span>
+
         </div>
       </div>
       <div className="max-w-screen-xl py-8  w-full p-3 px-12  flex-col lg:flex-row lg:py-12  flex items-center  justify-between mx-auto">
@@ -109,6 +116,10 @@ function Contact() {
           <span className=" text-5xl font-extrabold text-white font-display">
             {" "}
             Contact
+          </span>
+          <br />
+          <span className=" text-xl mt-2 font-extrabold text-white font-display">
+            Your Selected Plan : <span className="capitalize">{selectedPlan}</span>
           </span>
           <img
             src="https://techy-xi.vercel.app/assets/img/shape/star-5b.svg"
@@ -202,7 +213,7 @@ function Contact() {
                   name="phone"
                   class="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-last-name"
-                  type="number"
+                  type="text"
                   placeholder="+91 667 345 4556"
                 />
               </div>

@@ -59,6 +59,8 @@ const Slider = () => {
         draggable={true}
         // showDots={true}
         infinite={true}
+        arrows={false} 
+        showDots={false}
         partialVisible={false}
         dotListClass="custom-dot-list-style"
       >

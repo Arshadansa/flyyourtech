@@ -63,7 +63,7 @@ function HowWork() {
       ([entry]) => {
         setInView(entry.isIntersecting);
       },
-      { threshold: 0.1 } // Trigger when at least 10% of the element is visible
+      { threshold: 0.2 } // Trigger when at least 10% of the element is visible
     );
 
     if (sectionRef.current) {
@@ -83,7 +83,7 @@ function HowWork() {
   return (
     <section
       ref={sectionRef}
-      className="max-w-screen-xl py-20 p-3  lg:py-56 mx-auto"
+      className="max-w-screen-xl py-20 p-3   lg:py-48 mx-auto"
     >
       <div className="flex items-center justify-center xl:items-start xl:justify-normal flex-wrap gap-6 flex-col">
         <div>
@@ -163,7 +163,7 @@ function HowWork() {
           ))}
         </motion.div>
 
-        <motion.div className="grid w-full lg:mt-8 grid-cols-1 relative  md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <motion.div className="grid w-full lg:w-fit lg:mt-8 grid-cols-1 relative  md:grid-cols-2 xl:grid-cols-3 gap-8">
           {cardData1.map((card, index) => (
             <>
               <motion.div
@@ -240,6 +240,7 @@ function HowWork() {
           ))}
         </motion.div>
       </div>
+      
     </section>
   );
 }
