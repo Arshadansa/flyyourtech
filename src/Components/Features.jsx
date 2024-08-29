@@ -164,13 +164,13 @@ function Freature() {
           })}
         </Carousel>
       </div>
-        <div className="w-full flex items-center justify-center">
-          <a href="/ourwork" >
-            <button className="text-white hover:bg-black z-20  bg-[#913bfe] px-8  rounded-md py-1 text-lg">
-              Read More
-            </button>
-          </a>
-        </div>
+      <div className="w-full flex items-center justify-center">
+        <a href="/ourportfolio">
+          <button className="text-white hover:bg-black z-20  bg-[#913bfe] px-8  rounded-md py-1 text-lg">
+            View More Projects
+          </button>
+        </a>
+      </div>
     </section>
   );
 }

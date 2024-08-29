@@ -1,28 +1,28 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Pricing from "./Pricing";
 import PricingMobileApp from "./PricingMobileApp";
 import { motion } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
 
 function PricingDropDown() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(1);
 
-  // Ref to manage scrolling for the entire component
-  const componentRef = useRef(null);
+  // Refs to manage scrolling for the entire component and individual sections
   const sectionRefs = useRef({});
 
+  // Scroll to the section that is opened
   const handleToggle = (index) => {
     if (openIndex === index) {
       setOpenIndex(null);
     } else {
       setOpenIndex(index);
-      // Scroll the entire component into view
-      if (componentRef.current) {
-        componentRef.current.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
+      setTimeout(() => {
+        if (sectionRefs.current[index]) {
+          sectionRefs.current[index].scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 500); // Adding a delay to ensure smooth transition
     }
   };
 
@@ -48,6 +48,16 @@ function PricingDropDown() {
     };
   }, []);
 
+  // Scroll to the first section on component mount
+  useEffect(() => {
+    if (sectionRefs.current[openIndex]) {
+      sectionRefs.current[openIndex].scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, []); // Empty dependency array to run only once after initial render
+
   const headingVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
@@ -61,7 +71,7 @@ function PricingDropDown() {
   };
 
   return (
-    <div ref={componentRef} className="max-w-screen-xl mx-auto p-4 xl:p-0">
+    <div ref={sectionRef} className="max-w-screen-xl mx-auto p-4 pt-24">
       <motion.h1
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -83,11 +93,12 @@ function PricingDropDown() {
             title: "Need an App Solution?",
             content: <PricingMobileApp />,
           },
-          {
-            id: 3,
-            title: "Need a Custom Solution?",
-            content: <Pricing />,
-          },
+          // Uncomment if needed
+          // {
+          //   id: 3,
+          //   title: "Need a Custom Solution?",
+          //   content: <Pricing />,
+          // },
         ].map(({ id, title, content }) => (
           <div key={id} ref={(el) => (sectionRefs.current[id] = el)}>
             <h2 id={`accordion-heading-${id}`}>
@@ -98,24 +109,8 @@ function PricingDropDown() {
                 aria-expanded={openIndex === id}
                 aria-controls={`accordion-body-${id}`}
               >
-                <span className="text-xl">{title}</span>
-                <svg
-                  className={`w-3 h-3 transition-transform duration-300 ease-in-out ${
-                    openIndex === id ? "rotate-180" : ""
-                  }`}
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 5 5 1 1 5"
-                  />
-                </svg>
+                <span className="text-xl text-left">{title}</span>
+                View Package
               </button>
             </h2>
             <div

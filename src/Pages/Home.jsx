@@ -5,12 +5,11 @@ import Creative from "../Components/Creative";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
 import OurServices from "../Components/OurServices";
-import Freature from "../Components/Features";
+import Features from "../Components/Features";
 import HowWork from "../Components/HowWork";
 import Testimonials from "../Components/Testimonials";
 import ContactUs from "../Components/ContactUs";
 import { Element } from "react-scroll";
-import Pricing from "../Components/Pricing";
 import PricingDropDown from "../Components/PricingDropDown";
 
 function Home() {
@@ -38,10 +37,13 @@ function Home() {
         <OurServices />
       </Element>
 
-      <Element name="Feature" className="section">
-        <Freature />
-        <HowWork />
+      <Element name="OurPackages" className="section">
         <PricingDropDown />
+      </Element>
+
+      <Element name="Feature" className="section">
+        <Features />
+        <HowWork />
         <Testimonials />
       </Element>
 

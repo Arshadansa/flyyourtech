@@ -83,7 +83,7 @@ function HowWork() {
   return (
     <section
       ref={sectionRef}
-      className="max-w-screen-xl py-20 p-3   lg:py-48 mx-auto"
+      className="max-w-screen-xl py-20 p-3   lg:py-32 mx-auto"
     >
       <div className="flex items-center justify-center xl:items-start xl:justify-normal flex-wrap gap-6 flex-col">
         <div>

@@ -16,7 +16,7 @@ import { MdOutlinePhone } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import { IoIosArrowForward } from "react-icons/io";
 import { GoDotFill } from "react-icons/go";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 
 function Contact() {
@@ -84,15 +84,15 @@ function Contact() {
   };
 
   return (
-    <section className="w-full md:h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
+    <section className="w-full min-h-screen flex flex-col justify-between  relative bg-[#05103d] mx-auto">
       <ContactNavbar />
       <div className="max-w-screen-xl pl-8 my-6 md:my-0 2xl:pl-0 relative z-30 flex items-center gap- w-full mx-auto ">
         <div className="flex items-center gap-1 ">
-          <a href="/">
+          <Link to="/">
             <span className="text-white hover:cursor-pointer hover:text-[#913bfe]">
               Home
             </span>
-          </a>
+          </Link>
           <div className="mt-1">
             <IoIosArrowForward className="text-white" />
             {/* <GoDotFill className="text-white text-sm" /> */}

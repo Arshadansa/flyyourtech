@@ -29,7 +29,7 @@ function Testimonials() {
   return (
     <section
       ref={sectionRef}
-      className="lg:py-32   flex gap-24 lg:gap-32 flex-col items-center justify-center "
+      className="lg:py-24   flex gap-24 lg:gap-32 flex-col items-center justify-center "
     >
       <div className="bg-[#913bfe] p-6 lg:py-0 gap-3 flex flex-col md:flex-row items-center justify-center lg:justify-evenly lg:gap-32 px-12  lg:w-[90%] lg:h-80">
         {/* <div className="flex flex-col justify-center items-center gap-3 lg:gap-5 ">

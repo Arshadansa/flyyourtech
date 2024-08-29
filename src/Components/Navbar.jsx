@@ -95,6 +95,18 @@ function Navbar() {
               </Link>
             </li>
             <li>
+              <a
+                href="/ourportfolio"
+                smooth={true}
+                duration={1000}
+                onClick={handlemenu}
+                className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 hover:text-black lg:hover:bg-[#050c36] lg:hover:text-white md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Our Portfolio
+              </a>
+            </li>
+
+            <li>
               <Link
                 to="Feature"
                 smooth={true}
@@ -107,14 +119,25 @@ function Navbar() {
             </li>
             <li>
               <Link
-                to="contact"
+                to="OurPackages"
                 smooth={true}
                 duration={1000}
                 onClick={handlemenu}
                 className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 hover:text-black lg:hover:bg-[#050c36] lg:hover:text-white md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >
-                Contact
+                Our Packages
               </Link>
+            </li>
+            <li>
+              <a
+                href="/contact"
+                // smooth={true}
+                // duration={1000}
+                // onClick={handlemenu}
+                className="block hover:cursor-pointer py-2 px-3 md:p-0 uppercase  rounded hover:bg-gray-100 hover:text-black lg:hover:bg-[#050c36] lg:hover:text-white md:hover:bg-transparent  text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                Contact
+              </a>
             </li>
           </ul>
         </div>
