@@ -54,7 +54,7 @@ const OurWork = () => {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={headingVariants}
-              className="text-sm sm:text-3xl md:text-4xl font-bold text-center"
+              className="text-xl sm:text-3xl md:text-4xl font-bold text-center"
             >
               OUR PORTFOLIO
             </motion.h1>

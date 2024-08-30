@@ -110,7 +110,7 @@ function PricingDropDown() {
                 aria-controls={`accordion-body-${id}`}
               >
                 <span className="text-xl text-left">{title}</span>
-                View Package
+                <span className="hover:underline"> {openIndex ? " Close Package" : "View Package"}</span>
               </button>
             </h2>
             <div
